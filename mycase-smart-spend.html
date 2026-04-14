@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/images/Favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,9 +16,9 @@
   <!-- NAV -->
   <header class="site-header">
     <nav class="nav container">
-      <a href="index.html" class="nav-logo">Amy <span>MacDonald</span></a>
+      <a href="index.html" class="nav-logo"><img src="assets/images/Favicon.svg" alt="" class="nav-logo-icon">Amy <span>MacDonald</span></a>
       <ul class="nav-links">
-        <li><a href="index.html#work">Work</a></li>
+        <li><a href="work.html">Work</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="assets/resume.pdf" target="_blank" rel="noopener" class="nav-cta">Resume</a></li>
       </ul>
@@ -32,7 +33,7 @@
     <!-- CASE STUDY HERO -->
     <section class="cs-hero">
       <div class="container">
-        <a href="index.html" class="cs-back">
+        <a href="work.html" class="cs-back">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
           All Work
         </a>
@@ -46,10 +47,6 @@
             <span class="cs-meta-value">Affinipay</span>
           </div>
           <div class="cs-meta-item">
-            <span class="cs-meta-label">Product</span>
-            <span class="cs-meta-value">MyCase</span>
-          </div>
-          <div class="cs-meta-item">
             <span class="cs-meta-label">My Role</span>
             <span class="cs-meta-value">Product Designer</span>
           </div>
@@ -61,6 +58,15 @@
             <span class="cs-meta-label">Type</span>
             <span class="cs-meta-value">New Product Launch</span>
           </div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Timeline</span>
+            <span class="cs-meta-value">2.5 Years</span>
+          </div>
+        </div>
+
+        <div class="cs-tldr">
+          <span class="cs-tldr-label">TL;DR</span>
+          <p>Creating a new expense management software targeted specifically to law firms. I took Smart Spend from zero to beta — leading all UX research, design, and testing along the way. 200+ firms on the waitlist, 72 SUS score, strong early adoption.</p>
         </div>
 
         <div class="cs-hero-image">
@@ -81,13 +87,13 @@
           <aside class="cs-sidebar">
             <nav>
               <ul class="cs-nav">
-                <li><a href="#overview">Overview</a></li>
                 <li><a href="#problem">The Problem</a></li>
                 <li><a href="#research">Research</a></li>
-                <li><a href="#process">Design Process</a></li>
-                <li><a href="#solution">Solution</a></li>
-                <li><a href="#results">Results</a></li>
-                <li><a href="#reflections">Reflections</a></li>
+                <li><a href="#design">Design</a></li>
+                <li><a href="#testing">Testing</a></li>
+                <li><a href="#constraints">Constraints</a></li>
+                <li><a href="#outcome">Outcome</a></li>
+                <li><a href="#reflection">Reflection</a></li>
               </ul>
             </nav>
           </aside>
@@ -95,135 +101,117 @@
           <!-- Main content -->
           <article class="cs-content">
 
-            <div class="cs-section reveal" id="overview">
-              <div class="cs-divider"></div>
-              <h2>Overview</h2>
-              <p>
-                MyCase Smart Spend is a brand-new product I designed for
-                Affinipay — a way for law firms to track expenses and directly
-                bill them to the correct case, eliminating the manual
-                reconciliation that had plagued legal practices for years.
-              </p>
-              <p>
-                This was a greenfield product launch, meaning I was involved
-                from the earliest stages of discovery through to a shipped
-                product.
-              </p>
-            </div>
-
             <div class="cs-section reveal" id="problem">
               <div class="cs-divider"></div>
-              <h2>The Problem</h2>
-              <p>
-                <!-- Add your problem statement here. What was broken? Who was affected? What were the consequences? -->
-                Law firms routinely incur expenses on behalf of clients —
-                filing fees, courier costs, expert witness fees — but tracking
-                these expenses and ensuring they're billed to the right case
-                was a painful, error-prone manual process.
-              </p>
-              <div class="cs-callout">
-                <p>
-                  "How might we let law firms capture expenses at the point of
-                  spend and automatically associate them with the correct case?"
-                </p>
-              </div>
-              <p>
-                <!-- Expand: What was the business opportunity? What were users doing as a workaround? -->
-                [Add more context about the problem space here — user pain points, workarounds, business impact.]
-              </p>
+              <h2>The problem</h2>
+              <p>Law firms lose money on expenses all the time — not out of negligence, but because the process of managing them is genuinely broken. Attorneys are manually combing through credit card statements, hunting for receipts, logging the same expense in multiple systems, and trying to remember which charges were billable to which client. One attorney we spoke with estimated she spent close to 100 hours a year on it.</p>
+              <p>The financial risk isn't just inconvenient — it's real. Miss a reimbursable expense and that money comes straight out of the firm. For smaller practices, that kind of leakage adds up in a way that actually matters.</p>
+              <p>What surprised me in our research was that no one had built something specifically for how law firms work. There were general spend management tools, but nothing that understood the relationship between an expense and a client matter, or that connected to the software law firms already lived in every day. That gap was the opportunity — and it became AffiniPay's top strategic priority for over two years.</p>
+              <p>I was brought in as the sole designer to build it from scratch.</p>
             </div>
 
             <div class="cs-section reveal" id="research">
               <div class="cs-divider"></div>
-              <h2>Research</h2>
-              <p>
-                <!-- Describe your research methods: interviews, surveys, competitive analysis, etc. -->
-                [Describe your research approach — who you talked to, what you learned, surprising findings.]
-              </p>
-              <figure class="cs-image-block">
-                <div class="cs-image-placeholder">
-                  Add a research artifact image — affinity map, user interview notes, journey map, etc.
-                </div>
-                <figcaption>Add caption here</figcaption>
-              </figure>
-              <p>
-                <!-- Key insight from research -->
-                [What was the key insight that shaped the design direction?]
-              </p>
+              <h2>Getting the research right before designing anything</h2>
+              <p>My product manager led the initial discovery — over 25 customer interviews with attorneys, paralegals, office managers, and firm owners. My job was to make sure what we learned actually shaped what we built, not just informed a slide deck.</p>
+              <p>What I took from those research sessions wasn't just a list of pain points. It was an understanding of who was carrying this burden, how much of their time it was eating, and — honestly — how much anxiety it created. These weren't minor workflow frustrations. Firm owners talked about the fear of missing a billable expense. Office managers described the chaos of coordinating receipts across entire teams.</p>
+              <blockquote class="cs-pullquote">
+                <p>"I live in abject terror of you forgetting to put this in the database, because if you do, I will not get paid back. And if I gave away $700 to make $550, we're all going to be unemployed."</p>
+                <cite>— Firm Owner, Real Estate Law</cite>
+              </blockquote>
+              <p>That emotional weight shaped how we framed our MVP. We weren't just solving an efficiency problem — we were giving people a way to feel in control of their firm's money. That distinction ended up influencing a lot of design decisions down the line.</p>
+              <p>Alongside the customer work, I did a deep competitive analysis of spend management products outside of legal — Ramp, Divvy, Stripe, Float — looking at onboarding, card management, real-time notifications, receipt workflows, and categorization. The goal was to understand what modern financial tooling looked like, then figure out where we needed to go further for a legal-specific audience.</p>
             </div>
 
-            <div class="cs-section reveal" id="process">
+            <div class="cs-section reveal" id="design">
               <div class="cs-divider"></div>
-              <h2>Design Process</h2>
-              <p>
-                <!-- Walk through your process: sketches, wireframes, prototypes, testing -->
-                [Walk through your design process — ideation, key decisions, iterations, testing.]
-              </p>
-              <figure class="cs-image-block">
-                <div class="cs-image-placeholder">
-                  Add wireframes or early explorations here
-                </div>
-                <figcaption>Early wireframes — [describe what's shown]</figcaption>
-              </figure>
-              <figure class="cs-image-block">
-                <div class="cs-image-placeholder">
-                  Add prototype or mid-fidelity designs here
-                </div>
-                <figcaption>Mid-fidelity prototype — [describe iteration]</figcaption>
-              </figure>
+              <h2>Designing for a multi-role, multi-platform product</h2>
+              <p>One of the things that made this project genuinely complex was the range of users I was designing for simultaneously. Smart Spend isn't a single-role tool. A paralegal capturing a transaction on their phone has completely different needs than an office manager reviewing firm-wide spend on a desktop dashboard, or an accountant reconciling expenses at month end.</p>
+              <p>Early on, I mapped out distinct user journeys for each role — cardholder mobile flows, admin desktop management, expense linking to matters in their law practice management software, reporting, and accounting sync. Keeping those experiences coherent individually while making the product feel like one unified thing was a constant design challenge.</p>
+              <p>The insight that shaped the mobile experience most was simple: expense capture has to happen in the moment or it doesn't happen at all. Attorneys aren't going to sit down at the end of the week and reconstruct what they spent. So we built an SMS-triggered notification flow that prompts cardholders to link a transaction right when it happens — immediately after a charge goes through. That interaction became one of the defining features of the product.</p>
+              <blockquote class="cs-pullquote">
+                <p>"I always forget to link stuff. Having something that pops up and basically puts it in front of my face is friggin awesome. That's what I like about the expense thing."</p>
+                <cite>— Solo Practitioner, Administrative and Criminal Law</cite>
+              </blockquote>
             </div>
 
-            <div class="cs-section reveal" id="solution">
+            <div class="cs-section reveal" id="testing">
               <div class="cs-divider"></div>
-              <h2>Solution</h2>
-              <p>
-                <!-- Describe the final design — what did you ship? -->
-                [Describe the final solution — key screens, user flows, and design decisions.]
-              </p>
-              <figure class="cs-image-block">
-                <div class="cs-image-placeholder">
-                  Add your final design screens here
+              <h2>Testing and iterating — under real pressure</h2>
+              <p>I owned all of the usability testing throughout this project. Planning studies, recruiting participants, running sessions, synthesizing findings, turning those findings into design decisions — that was all me, across two formal rounds of testing and then continuously through alpha and beta.</p>
+              <p>Round one was 23 usability tests focused on admin workflows: the desktop dashboard, transaction management, card issuance, and user permissions. Round two shifted to the individual cardholder experience on mobile — 11 sessions digging into the day-to-day transaction flow.</p>
+              <p>What made this unusually high-stakes: our CEO and CFO were among our alpha testers. I was designing a product that the company's executive team would be using and scrutinizing firsthand. That's a different kind of pressure than typical user testing, and it pushed me to be extremely deliberate — every decision needed to be defensible with evidence, not just intuition.</p>
+              <p>The feedback across rounds was strong, but it gave us specific things to act on. Users wanted more context on the expense linking page, more detail in transaction tables, and a clearer separation between raw bank data and the expense details they were adding themselves. Those felt like small changes but made a real difference in how confident users felt using the product.</p>
+              <div class="cs-metrics">
+                <div class="cs-metric">
+                  <span class="cs-metric-number">72</span>
+                  <span class="cs-metric-label">Combined SUS score across alpha and beta — above industry average for enterprise tools</span>
                 </div>
-                <figcaption>Final design — [key screen description]</figcaption>
-              </figure>
-              <figure class="cs-image-block">
-                <div class="cs-image-placeholder">
-                  Add another final design screen here
+                <div class="cs-metric">
+                  <span class="cs-metric-number">22+</span>
+                  <span class="cs-metric-label">Average transactions per activated card in the first month among the first 10 beta firms</span>
                 </div>
-                <figcaption>Final design — [key screen description]</figcaption>
-              </figure>
+                <div class="cs-metric">
+                  <span class="cs-metric-number">200+</span>
+                  <span class="cs-metric-label">Firms on the beta waitlist before general availability</span>
+                </div>
+                <div class="cs-metric">
+                  <span class="cs-metric-number">34</span>
+                  <span class="cs-metric-label">Total usability test sessions across two formal rounds of testing</span>
+                </div>
+              </div>
+              <p>The early adoption numbers told a clear story — firms weren't just signing up, they were actually using it. An average of 22 transactions per activated card in the first month isn't passive onboarding. That's a product people integrated into how they work right away.</p>
             </div>
 
-            <div class="cs-section reveal" id="results">
+            <div class="cs-section reveal" id="constraints">
               <div class="cs-divider"></div>
-              <h2>Results &amp; Impact</h2>
-              <p>
-                <!-- What happened after launch? Metrics, qualitative feedback, business outcomes. -->
-                [Add outcomes, metrics, and impact after launch.]
-              </p>
-              <div class="stats-row">
-                <div class="stat-card">
-                  <p class="stat-number">—</p>
-                  <p class="stat-label">Add a key metric here</p>
+              <h2>The real constraints</h2>
+              <p>I want to be honest about what made this project hard, because navigating those constraints was as much a part of the work as the design itself.</p>
+              <div class="cs-constraints">
+                <div class="cs-constraint">
+                  <h3>A design system being built in real time</h3>
+                  <p>AffiniPay was mid-rebrand, unifying all products under a new design system that was still being built while I was designing Smart Spend. I was effectively the guinea pig — designing with components that weren't finished, and sometimes ahead of the system entirely.</p>
                 </div>
-                <div class="stat-card">
-                  <p class="stat-number">—</p>
-                  <p class="stat-label">Add a key metric here</p>
+                <div class="cs-constraint">
+                  <h3>External banking partners</h3>
+                  <p>Smart Spend required deep integration with external banking and card-issuing partners. Aligning on timelines was genuinely difficult and directly impacted our release schedule in ways that were outside anyone's control.</p>
                 </div>
-                <div class="stat-card">
-                  <p class="stat-number">—</p>
-                  <p class="stat-label">Add a key metric here</p>
+                <div class="cs-constraint">
+                  <h3>One designer for everything</h3>
+                  <p>I was the only designer and researcher on the product for the full 2.5 years. Every decision — from product strategy to final pixel — ran through me. That meant being very clear about what to prioritize and when to move fast versus slow down and get it right.</p>
                 </div>
               </div>
             </div>
 
-            <div class="cs-section reveal" id="reflections">
+            <div class="cs-section reveal" id="outcome">
               <div class="cs-divider"></div>
-              <h2>Reflections</h2>
-              <p>
-                <!-- What would you do differently? What did you learn? -->
-                [What did this project teach you? What would you do differently with more time or resources?]
-              </p>
+              <h2>Where it landed</h2>
+              <p>By the time I transitioned off the project, Smart Spend had moved through alpha and beta with strong engagement, a waitlist of over 200 firms, and a 72 SUS score that validated the product was genuinely usable — not just functional. The press coverage reflected what we set out to do: build something that didn't exist before.</p>
+              <div class="cs-press">
+                <div class="cs-press-item">
+                  <strong>Law Next</strong>
+                  <span>"First Of Its Kind Credit Card/Software Combo from LawPay and MyCase Lets Law Firms Track Expenses Directly to Matters and Invoicing"</span>
+                  <a href="https://www.lawnext.com/2024/02/first-of-its-kind-credit-card-software-combo-from-lawpay-and-mycase-lets-law-firms-track-expenses-directly-to-matters-and-invoicing.html" target="_blank" rel="noopener" class="cs-press-link">Read more →</a>
+                </div>
+                <div class="cs-press-item">
+                  <strong>Above the Law</strong>
+                  <span>"Lawyers Spend Way Too Much Time Dealing With Expenses. New product launch from AffiniPay/MyCase looks to address this problem."</span>
+                  <a href="https://abovethelaw.com/2024/02/lawyers-spend-way-too-much-time-dealing-with-expenses/" target="_blank" rel="noopener" class="cs-press-link">Read more →</a>
+                </div>
+                <div class="cs-press-item">
+                  <strong>Business Wire</strong>
+                  <span>"AffiniPay to Launch MyCase Smart Spend, Powered by LawPay Visa Credit Card, First Business Credit Card and Spend Management Offering for the Legal Industry"</span>
+                  <a href="https://www.businesswire.com/news/home/20240228439561/en/AffiniPay-to-Launch-MyCase-Smart-Spend-Powered-by-LawPay-Visa-Credit-Card-First-Business-Credit-Card-and-Spend-Management-Offering-for-the-Legal-Industry" target="_blank" rel="noopener" class="cs-press-link">Read more →</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="cs-section reveal" id="reflection">
+              <div class="cs-divider"></div>
+              <h2>What I took away</h2>
+              <p>This project is the one I'll point to when someone asks what I'm capable of. Not because everything went perfectly — it didn't — but because it required me to operate across every dimension of product design at once, under real pressure, with real stakes.</p>
+              <p>Owning research, testing, systems thinking, stakeholder communication, and execution simultaneously changes how you make decisions. You can't throw problems over a wall to someone else. You have to hold all of it, figure out what matters most, and keep moving.</p>
+              <p>The thing I'm proudest of isn't a specific screen. It's that we built something genuinely new for an industry that had been ignored by design for too long — and that firms were lining up to use it before it even shipped.</p>
             </div>
 
           </article>
@@ -234,7 +222,10 @@
     <!-- PAGINATION -->
     <div class="container">
       <nav class="cs-pagination">
-        <span></span>
+        <a href="ai-smart-check.html" class="cs-pag-link">
+          <span class="pag-label">Previous Project</span>
+          <span class="pag-title">← AI Smart Check</span>
+        </a>
         <a href="bulk-invoicing.html" class="cs-pag-link next">
           <span class="pag-label">Next Project</span>
           <span class="pag-title">Bulk Invoicing →</span>

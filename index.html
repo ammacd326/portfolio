@@ -5,9 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amy MacDonald — UX/Product Designer</title>
   <meta name="description" content="End-to-end Product Designer specializing in B2B SaaS, FinTech, and LegalTech. Currently Senior Product Designer at JobNimbus.">
+  <meta property="og:title" content="Amy MacDonald — UX/Product Designer">
+  <meta property="og:description" content="End-to-end Product Designer with 5+ years in B2B SaaS — FinTech, LegalTech, and home services.">
+  <meta property="og:image" content="https://amymacd-design.com/assets/images/og-image.jpg">
+  <meta property="og:url" content="https://amymacd-design.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/images/Favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -17,9 +24,9 @@
        ========================================================= -->
   <header class="site-header">
     <nav class="nav container">
-      <a href="index.html" class="nav-logo">Amy <span>MacDonald</span></a>
+      <a href="index.html" class="nav-logo"><img src="assets/images/Favicon.svg" alt="" class="nav-logo-icon">Amy <span>MacDonald</span></a>
       <ul class="nav-links">
-        <li><a href="#work">Work</a></li>
+        <li><a href="work.html">Work</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="assets/resume.pdf" target="_blank" rel="noopener" class="nav-cta">Resume</a></li>
       </ul>
@@ -47,14 +54,15 @@
               specializing in FinTech and LegalTech. Currently leading
               AI-first design at JobNimbus.
             </p>
-            <div class="hero-actions">
-              <a href="#work" class="btn btn-primary">View My Work</a>
-              <a href="about.html" class="btn btn-outline">About Me</a>
-            </div>
           </div>
           <div class="hero-graphic" aria-hidden="true">
             <div class="hero-blob"></div>
+            <div class="hero-blob-mid"></div>
             <div class="hero-blob-2"></div>
+          </div>
+          <div class="hero-actions">
+            <a href="work.html" class="btn btn-primary">View My Work</a>
+            <a href="about.html" class="btn btn-outline">About Me</a>
           </div>
         </div>
       </div>
@@ -70,97 +78,10 @@
           <p class="section-sub">Product design · UX research · B2B SaaS</p>
         </div>
 
-        <div class="projects-grid">
+        <div class="projects-grid" id="projects-grid-home"></div>
 
-          <!-- FEATURED: MyCase Smart Spend -->
-          <article class="project-card project-card--featured reveal">
-            <a href="mycase-smart-spend.html">
-              <div class="project-image p1">
-                <!-- Replace with: <img src="assets/images/smart-spend-cover.png" alt="MyCase Smart Spend"> -->
-              </div>
-              <div class="project-info">
-                <div class="project-meta">
-                  <span class="project-tag">Product Design</span>
-                  <span class="project-tag">FinTech</span>
-                  <span class="project-tag">LegalTech</span>
-                  <span class="project-company">Affinipay</span>
-                </div>
-                <h3 class="project-title">MyCase Smart Spend</h3>
-                <p class="project-desc">
-                  A brand-new product launch that lets law firms track expenses
-                  and directly bill them to the correct case — eliminating
-                  manual reconciliation workflows.
-                </p>
-              </div>
-            </a>
-          </article>
-
-          <!-- Bulk Invoicing -->
-          <article class="project-card reveal reveal-delay-1">
-            <a href="bulk-invoicing.html">
-              <div class="project-image p2">
-                <!-- Replace with: <img src="assets/images/bulk-invoicing-cover.png" alt="Bulk Invoicing"> -->
-              </div>
-              <div class="project-info">
-                <div class="project-meta">
-                  <span class="project-tag">Product Design</span>
-                  <span class="project-tag">LegalTech</span>
-                  <span class="project-company">Filevine</span>
-                </div>
-                <h3 class="project-title">Bulk Invoicing</h3>
-                <p class="project-desc">
-                  Research revealed that batch invoicing wasn't the real need —
-                  so we redesigned the workflow to let users create multiple
-                  invoices in a single bulk action.
-                </p>
-              </div>
-            </a>
-          </article>
-
-          <!-- A2P 10DLC -->
-          <article class="project-card reveal reveal-delay-2">
-            <a href="a2p-10dlc.html">
-              <div class="project-image p3">
-                <!-- Replace with: <img src="assets/images/a2p-cover.png" alt="A2P 10DLC Registration"> -->
-              </div>
-              <div class="project-info">
-                <div class="project-meta">
-                  <span class="project-tag">Product Design</span>
-                  <span class="project-tag">Compliance</span>
-                  <span class="project-company">Filevine</span>
-                </div>
-                <h3 class="project-title">A2P 10DLC Registration</h3>
-                <p class="project-desc">
-                  Designed an in-app business registration flow in response to
-                  new wireless carrier regulations — delivered on a one-month
-                  timeline.
-                </p>
-              </div>
-            </a>
-          </article>
-
-          <!-- Product Tour -->
-          <article class="project-card reveal reveal-delay-3">
-            <a href="product-tour.html">
-              <div class="project-image p4">
-                <!-- Replace with: <img src="assets/images/product-tour-cover.png" alt="Utah Foster Care Product Tour"> -->
-              </div>
-              <div class="project-info">
-                <div class="project-meta">
-                  <span class="project-tag">UX Design</span>
-                  <span class="project-tag">Onboarding</span>
-                  <span class="project-company">Unite.ly</span>
-                </div>
-                <h3 class="project-title">Product Tour — Utah Foster Care</h3>
-                <p class="project-desc">
-                  Created an employee onboarding product tour for Bridge to
-                  Utah Foster Care ahead of a Foster Parent rollout — first
-                  professional project, tight scope and timeline.
-                </p>
-              </div>
-            </a>
-          </article>
-
+        <div class="work-see-all">
+          <a href="work.html" class="btn btn-outline">See All Work</a>
         </div>
       </div>
     </section>
@@ -191,5 +112,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/projects.js"></script>
 </body>
 </html>

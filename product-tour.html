@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Tour — Amy MacDonald</title>
-  <meta name="description" content="Designing a product tour to drive adoption of Bridge, Utah Foster Care's collaboration platform, before a major Foster Parent onboarding.">
+  <title>Bridge Product Tour — Amy MacDonald</title>
+  <meta name="description" content="Designing an onboarding experience to drive adoption of a collaboration platform built for foster care workers and foster parents. Unite.ly.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/images/Favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,9 +16,9 @@
   <!-- NAV -->
   <header class="site-header">
     <nav class="nav container">
-      <a href="index.html" class="nav-logo">Amy <span>MacDonald</span></a>
+      <a href="index.html" class="nav-logo"><img src="assets/images/Favicon.svg" alt="" class="nav-logo-icon">Amy <span>MacDonald</span></a>
       <ul class="nav-links">
-        <li><a href="index.html#work">Work</a></li>
+        <li><a href="work.html">Work</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="assets/resume.pdf" target="_blank" rel="noopener" class="nav-cta">Resume</a></li>
       </ul>
@@ -32,13 +33,13 @@
     <!-- HERO -->
     <section class="cs-hero">
       <div class="container">
-        <a href="index.html" class="cs-back">
+        <a href="work.html" class="cs-back">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
           All Work
         </a>
 
         <p class="page-eyebrow">Unite.ly · UX Design</p>
-        <h1>Product Tour — Utah Foster Care</h1>
+        <h1>Bridge Product Tour</h1>
 
         <div class="cs-meta-bar">
           <div class="cs-meta-item">
@@ -46,27 +47,32 @@
             <span class="cs-meta-value">Unite.ly</span>
           </div>
           <div class="cs-meta-item">
-            <span class="cs-meta-label">Client</span>
-            <span class="cs-meta-value">Bridge / Utah Foster Care</span>
+            <span class="cs-meta-label">My Role</span>
+            <span class="cs-meta-value">Product Designer</span>
           </div>
           <div class="cs-meta-item">
-            <span class="cs-meta-label">My Role</span>
-            <span class="cs-meta-value">UX Designer</span>
+            <span class="cs-meta-label">Domain</span>
+            <span class="cs-meta-value">Community Platform</span>
+          </div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Type</span>
+            <span class="cs-meta-value">New Feature · Onboarding</span>
           </div>
           <div class="cs-meta-item">
             <span class="cs-meta-label">Timeline</span>
             <span class="cs-meta-value">3 Weeks</span>
           </div>
-          <div class="cs-meta-item">
-            <span class="cs-meta-label">Type</span>
-            <span class="cs-meta-value">Onboarding · First Project</span>
-          </div>
+        </div>
+
+        <div class="cs-tldr">
+          <span class="cs-tldr-label">TL;DR</span>
+          <p>UFC employees weren't adopting Bridge — they found it confusing and kept defaulting to old tools. With foster parents about to be onboarded, we had three weeks to fix it. I researched, designed, and shipped a product tour that's still live today.</p>
         </div>
 
         <div class="cs-hero-image">
-          <!-- Replace with: <img src="assets/images/product-tour-header.png" alt="Product Tour — Utah Foster Care"> -->
+          <!-- Replace with: <img src="assets/images/product-tour-cover.png" alt="Bridge Product Tour"> -->
           <div class="cs-image-placeholder" style="aspect-ratio:16/7;">
-            Add header image — assets/images/product-tour-header.png
+            Add header image — assets/images/product-tour-cover.png
           </div>
         </div>
       </div>
@@ -81,12 +87,12 @@
           <aside class="cs-sidebar">
             <nav>
               <ul class="cs-nav">
-                <li><a href="#about">About</a></li>
-                <li><a href="#problem">The Problem</a></li>
+                <li><a href="#context">The Context</a></li>
                 <li><a href="#research">Research</a></li>
-                <li><a href="#features">Key Features</a></li>
-                <li><a href="#design">Design</a></li>
-                <li><a href="#results">Results</a></li>
+                <li><a href="#decisions">What to Highlight</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#outcome">Outcome</a></li>
+                <li><a href="#reflection">Reflection</a></li>
               </ul>
             </nav>
           </aside>
@@ -94,168 +100,78 @@
           <!-- Content -->
           <article class="cs-content">
 
-            <div class="cs-section reveal" id="about">
+            <div class="cs-section reveal" id="context">
               <div class="cs-divider"></div>
-              <h2>About</h2>
-              <p>
-                Unite.ly is an IT services platform that allows teams to
-                communicate and collaborate in one easy tool. Unite.ly's main
-                client was Utah Foster Care (UFC), and we built out their
-                custom program called Bridge.
-              </p>
-              <p>
-                The goal of Bridge was to be a place where UFC employees and
-                Foster Parents could communicate, collaborate, and create a
-                supportive community for foster children.
-              </p>
-            </div>
-
-            <div class="cs-section reveal" id="problem">
-              <div class="cs-divider"></div>
-              <h2>The Problem</h2>
-              <p>
-                We were experiencing low platform adoption among UFC employees.
-                Feedback indicated that employees were confused about how to
-                use Bridge and the purpose of its various sections — as a
-                result, users were defaulting to old tools and not utilizing
-                the platform.
-              </p>
-              <p>
-                UFC was understandably concerned about onboarding Foster
-                Parents while employee adoption was still low. As a team we
-                brainstormed potential solutions to improve product
-                understanding for current users and create a smooth onboarding
-                path for new ones.
-              </p>
-
-              <div class="cs-callout">
-                <p>
-                  "We couldn't onboard Foster Parents if employees weren't
-                  confident using the platform themselves. The product tour
-                  had to solve for both."
-                </p>
-              </div>
-
-              <p>We decided the best solution was a product tour.</p>
+              <h2>The context</h2>
+              <p>Bridge was a custom platform built for Utah Foster Care — a place where UFC employees and foster parents could communicate, collaborate, and build a supportive community around foster children. The mission behind it was genuinely meaningful. The adoption problem was getting in the way of it.</p>
+              <p>UFC employees were logging in, getting confused, and going back to the tools they already knew. The feedback was consistent: people didn't understand the purpose of different sections or how to navigate the platform. And with foster parents about to be onboarded, the team didn't want to introduce a new group of users to a product that existing users were already struggling with.</p>
+              <p>We needed a solution, and we had three weeks.</p>
             </div>
 
             <div class="cs-section reveal" id="research">
               <div class="cs-divider"></div>
-              <h2>Research &amp; Competitive Analysis</h2>
+              <h2>Starting with research</h2>
+              <p>Before jumping into designs, I wanted to understand what actually makes a product tour work — because a bad onboarding experience can be worse than no onboarding at all. I looked at a wide range of products and UI patterns, focusing on what drove comprehension and retention versus what felt like noise users would click through without reading.</p>
+              <p>That research shaped how I thought about what we were building. The goal wasn't to show users everything — it was to orient them quickly around the things that would make them feel confident enough to keep going.</p>
+
+              <div class="cs-callout">
+                <p><strong>The design challenge:</strong> Bridge's navigation was fully customizable — section names and icons could be changed per program. The tour had to work dynamically, pulling in whatever names UFC had chosen rather than relying on hardcoded labels. That added a layer of technical complexity that shaped what was feasible.</p>
+              </div>
+            </div>
+
+            <div class="cs-section reveal" id="decisions">
+              <div class="cs-divider"></div>
+              <h2>Deciding what to highlight</h2>
+              <p>I worked with our product owner and UFC's customer success manager to decide which features the tour actually needed to cover. We kept the scope tight — the main navigation, how to start a chat, the key features within chat including video, and how to reach the support team.</p>
+              <p>That last one mattered more than it might seem. If users got stuck and didn't know how to get help, they'd disengage entirely. Making support visible and accessible was as important as explaining the features themselves.</p>
+            </div>
+
+            <div class="cs-section reveal" id="process">
+              <div class="cs-divider"></div>
+              <h2>Working within real constraints</h2>
+              <p>With three weeks on the clock, I brought research-informed sketches to the team early — before committing to high-fidelity work — specifically to pressure-test what was actually buildable. That conversation with the developer shaped the final design more than anything else. There were things I wanted to do that weren't feasible in the time we had, and iterating on sketches made those tradeoffs cheaper to navigate.</p>
+              <p>We went through a few rounds of iteration before landing on a final direction that worked within both the technical constraints and the timeline. From there I moved into high-fidelity designs for the finished tour.</p>
 
               <figure class="cs-image-block">
-                <!-- Replace with: <img src="assets/images/product-tour-process.png" alt="Process overview"> -->
+                <!-- Replace with: <img src="assets/images/product-tour-designs.png" alt="Product Tour Designs"> -->
                 <div class="cs-image-placeholder">
-                  Add process overview image — assets/images/product-tour-process.png
+                  Add product tour designs — assets/images/product-tour-designs.png
                 </div>
-                <figcaption>Process overview</figcaption>
-              </figure>
-
-              <p>
-                Before designing anything, I did competitive analysis and
-                research on product tours. I was looking for what makes a
-                product tour successful — examining various types of tours and
-                different UI patterns across the industry.
-              </p>
-              <p>
-                The research helped me narrow down 3 key elements I believed
-                would solve the retention problem while also enabling a smooth
-                onboarding experience for new users.
-              </p>
-
-              <figure class="cs-image-block">
-                <!-- Replace with: <img src="assets/images/product-tour-takeaways.png" alt="Research takeaways"> -->
-                <div class="cs-image-placeholder">
-                  Add research takeaways image — assets/images/product-tour-takeaways.png
-                </div>
-                <figcaption>Key takeaways from competitive analysis</figcaption>
+                <figcaption>High-fidelity product tour designs — Bridge for Utah Foster Care</figcaption>
               </figure>
             </div>
 
-            <div class="cs-section reveal" id="features">
+            <div class="cs-section reveal" id="outcome">
               <div class="cs-divider"></div>
-              <h2>Choosing What to Highlight</h2>
-              <p>
-                To decide which features to highlight in the tour, I met with
-                our product owner and the UFC customer success manager. We
-                aligned on two primary areas: the main navigation and chat.
-              </p>
-              <p>
-                The main navigation presented a unique challenge — all section
-                names and icons were customizable per program. The tour needed
-                to be responsive to the custom names selected for Bridge while
-                still providing meaningful descriptions.
-              </p>
-              <p>
-                Within chat, the key interactions to highlight were how to
-                start a chat, the various chat features, and how to use video.
-                We also prioritized surfacing how to contact the support team.
-              </p>
+              <h2>How it landed</h2>
+              <p>We shipped before the foster parent onboarding began. The tour gave both new and existing users a structured way to understand the platform from the moment they logged in — addressing the exact confusion UFC had been flagging.</p>
+              <p>The fact that it's still live today says something. A lot of quick-turnaround solutions get replaced or removed when something better comes along. This one stuck.</p>
 
-              <p><strong>Next: Partnering with Development</strong></p>
-              <p>
-                With only 3 weeks until Foster Parents were being onboarded,
-                I partnered with the developer early to determine what was
-                realistically achievable within the timeframe. I presented
-                research-informed sketches of potential solutions and we
-                iterated together before landing on a final direction that was
-                feasible within scope.
-              </p>
-
-              <figure class="cs-image-block">
-                <!-- Replace with: <img src="assets/images/product-tour-sketches.png" alt="Initial sketches"> -->
-                <div class="cs-image-placeholder">
-                  Add initial sketches — assets/images/product-tour-sketches.png
+              <div class="cs-metrics">
+                <div class="cs-metric">
+                  <span class="cs-metric-number">3</span>
+                  <span class="cs-metric-label">Weeks from brief to shipped</span>
                 </div>
-                <figcaption>Initial sketches of the product tour</figcaption>
-              </figure>
-            </div>
-
-            <div class="cs-section reveal" id="design">
-              <div class="cs-divider"></div>
-              <h2>Design</h2>
-              <p>
-                After iterating multiple times based on development feasibility
-                and team alignment, I designed the finished product tour.
-              </p>
-
-              <figure class="cs-image-block">
-                <!-- Replace with: <img src="assets/images/product-tour-high-fi.png" alt="Final high-fidelity designs"> -->
-                <div class="cs-image-placeholder">
-                  Add high-fidelity designs — assets/images/product-tour-high-fi.png
+                <div class="cs-metric">
+                  <span class="cs-metric-number">2</span>
+                  <span class="cs-metric-label">User groups successfully onboarded — UFC employees and foster parents</span>
                 </div>
-                <figcaption>Final high-fidelity product tour designs</figcaption>
-              </figure>
-            </div>
-
-            <div class="cs-section reveal" id="results">
-              <div class="cs-divider"></div>
-              <h2>Results</h2>
-              <p>
-                We shipped the product tour before Foster Parents were
-                onboarded — hitting the hard deadline. I left Unite.ly shortly
-                after, so I wasn't able to measure long-term adoption impact
-                firsthand.
-              </p>
-              <p>
-                The tour is still in practice today on Unite.ly — which speaks
-                to the durability of the solution.
-              </p>
-
-              <div class="stats-row">
-                <div class="stat-card">
-                  <p class="stat-number">3wk</p>
-                  <p class="stat-label">Research to shipped product tour</p>
+                <div class="cs-metric">
+                  <span class="cs-metric-number">Still</span>
+                  <span class="cs-metric-label">Live today — the tour remains in production</span>
                 </div>
-                <div class="stat-card">
-                  <p class="stat-number">✓</p>
-                  <p class="stat-label">Shipped before Foster Parent onboarding</p>
-                </div>
-                <div class="stat-card">
-                  <p class="stat-number">Still live</p>
-                  <p class="stat-label">Tour remains in use on Unite.ly today</p>
+                <div class="cs-metric">
+                  <span class="cs-metric-number">1st</span>
+                  <span class="cs-metric-label">Professional project — delivered on time with real users and real stakes</span>
                 </div>
               </div>
+            </div>
+
+            <div class="cs-section reveal" id="reflection">
+              <div class="cs-divider"></div>
+              <h2>What I took away</h2>
+              <p>This was an early project for me, and looking back, what stands out is how much the constraints forced good decisions. A three-week timeline with a hard external deadline meant I couldn't afford to over-design. Bringing sketches to the developer early instead of waiting for polished mockups saved time and surfaced problems before they became expensive. Those habits have stayed with me.</p>
+              <p>The stakes also weren't abstract. The people using this platform were foster care workers and families trying to support kids in the system. Designing something that actually helped them use a tool they needed felt like a good reason to get it right.</p>
             </div>
 
           </article>
@@ -268,12 +184,9 @@
       <nav class="cs-pagination">
         <a href="a2p-10dlc.html" class="cs-pag-link">
           <span class="pag-label">Previous Project</span>
-          <span class="pag-title">← A2P 10DLC</span>
+          <span class="pag-title">← A2P 10DLC Registration</span>
         </a>
-        <a href="mycase-smart-spend.html" class="cs-pag-link next">
-          <span class="pag-label">Back to Start</span>
-          <span class="pag-title">MyCase Smart Spend →</span>
-        </a>
+        <span></span>
       </nav>
     </div>
 

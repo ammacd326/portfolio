@@ -4,10 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>A2P 10DLC Registration — Amy MacDonald</title>
-  <meta name="description" content="Designing an in-app business and number registration flow in response to new wireless carrier regulations — delivered in 5 weeks at Filevine.">
+  <meta name="description" content="Designing a compliance-critical registration flow for hundreds of law firms — in five weeks — before a hard regulatory deadline. Filevine, LegalTech.">
+  <meta property="og:title" content="A2P 10DLC Registration — Amy MacDonald">
+  <meta property="og:description" content="Designing a compliance-critical registration flow for hundreds of law firms in five weeks before a hard regulatory deadline.">
+  <meta property="og:image" content="https://amymacd-design.com/assets/images/og-image.jpg">
+  <meta property="og:url" content="https://amymacd-design.com/a2p-10dlc.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/images/Favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,9 +22,9 @@
   <!-- NAV -->
   <header class="site-header">
     <nav class="nav container">
-      <a href="index.html" class="nav-logo">Amy <span>MacDonald</span></a>
+      <a href="index.html" class="nav-logo"><img src="assets/images/Favicon.svg" alt="" class="nav-logo-icon">Amy <span>MacDonald</span></a>
       <ul class="nav-links">
-        <li><a href="index.html#work">Work</a></li>
+        <li><a href="work.html">Work</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="assets/resume.pdf" target="_blank" rel="noopener" class="nav-cta">Resume</a></li>
       </ul>
@@ -32,7 +39,7 @@
     <!-- HERO -->
     <section class="cs-hero">
       <div class="container">
-        <a href="index.html" class="cs-back">
+        <a href="work.html" class="cs-back">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
           All Work
         </a>
@@ -47,15 +54,15 @@
           </div>
           <div class="cs-meta-item">
             <span class="cs-meta-label">My Role</span>
-            <span class="cs-meta-value">Product Designer (Solo)</span>
-          </div>
-          <div class="cs-meta-item">
-            <span class="cs-meta-label">Team</span>
-            <span class="cs-meta-value">4 Devs · QA · Product Owner</span>
+            <span class="cs-meta-value">Product Designer</span>
           </div>
           <div class="cs-meta-item">
             <span class="cs-meta-label">Domain</span>
             <span class="cs-meta-value">LegalTech · Compliance</span>
+          </div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Type</span>
+            <span class="cs-meta-value">New Feature · Compliance</span>
           </div>
           <div class="cs-meta-item">
             <span class="cs-meta-label">Timeline</span>
@@ -63,10 +70,15 @@
           </div>
         </div>
 
+        <div class="cs-tldr">
+          <span class="cs-tldr-label">TL;DR</span>
+          <p>New federal SMS regulations meant Filevine customers needed to register their businesses and phone numbers before a hard deadline — or face service disruptions. I designed the full registration flow in five weeks, presented to C-level executives, shipped on time, and introduced a notification pattern that made it into the design system.</p>
+        </div>
+
         <div class="cs-hero-image">
-          <!-- Replace with: <img src="assets/images/a2p-header.png" alt="A2P 10DLC Registration"> -->
+          <!-- Replace with: <img src="assets/images/a2p-cover.png" alt="A2P 10DLC Registration"> -->
           <div class="cs-image-placeholder" style="aspect-ratio:16/7;">
-            Add header image — assets/images/a2p-header.png
+            Add header image — assets/images/a2p-cover.png
           </div>
         </div>
       </div>
@@ -81,12 +93,12 @@
           <aside class="cs-sidebar">
             <nav>
               <ul class="cs-nav">
-                <li><a href="#context">Context</a></li>
-                <li><a href="#problem">The Problem</a></li>
+                <li><a href="#situation">The Situation</a></li>
+                <li><a href="#ask">The Ask</a></li>
                 <li><a href="#process">Process</a></li>
                 <li><a href="#design-system">Design System</a></li>
-                <li><a href="#solution">Solution</a></li>
-                <li><a href="#results">Results</a></li>
+                <li><a href="#outcome">Outcome</a></li>
+                <li><a href="#reflection">Reflection</a></li>
               </ul>
             </nav>
           </aside>
@@ -94,194 +106,81 @@
           <!-- Content -->
           <article class="cs-content">
 
-            <div class="cs-section reveal" id="context">
+            <div class="cs-section reveal" id="situation">
               <div class="cs-divider"></div>
-              <h2>Context</h2>
-              <p>
-                Filevine is a legal management platform — customizable to help
-                law firms manage their cases in a way that best suits their
-                needs. Among its many features, Filevine allows org admins to
-                manage phone and fax numbers for texting directly within the
-                platform.
-              </p>
-              <p>
-                I was the designated designer on a team with 4 developers, a
-                QA, and a product owner. We were normally assigned to billing
-                and timekeeping, but were the only team with the bandwidth to
-                take on this project when it became urgent.
-              </p>
+              <h2>The situation</h2>
+              <p>In 2021, wireless carriers introduced new regulations around application-to-person SMS messaging — known as A2P 10DLC. The short version: any business sending text messages through a platform like Filevine now needed to register their use case and phone numbers with carriers, or risk their messages failing to deliver or being flagged as spam.</p>
+              <p>For law firms using Filevine to communicate with clients, that wasn't a minor inconvenience. SMS is a core part of how many firms operate. Unregistered numbers going dark would have been a real problem for hundreds of customers.</p>
+              <p>The deadline was set by the carriers — not us. We had five weeks.</p>
             </div>
 
-            <div class="cs-section reveal" id="problem">
+            <div class="cs-section reveal" id="ask">
               <div class="cs-divider"></div>
-              <h2>The Problem</h2>
-              <p>
-                In 2021, wireless carriers rolled out regulations for messages
-                sent from applications to personal cell phones using 10-digit
-                numbers (A2P 10DLC). These regulations are designed to make it
-                easier for businesses to connect with customers while also
-                countering spam.
-              </p>
-              <p>
-                As part of these regulations, businesses sending SMS messages
-                through Filevine needed to register their use case with
-                providers — as well as each individual number — to avoid
-                messages failing to deliver or being marked as spam.
-              </p>
-
-              <figure class="cs-image-block">
-                <!-- Replace with: <img src="assets/images/a2p-main-goals.png" alt="Main Goals"> -->
-                <div class="cs-image-placeholder">
-                  Add main goals image — assets/images/a2p-main-goals.png
-                </div>
-                <figcaption>Project goals and registration tier breakdown</figcaption>
-              </figure>
-
-              <p>
-                Two registration tiers were available:
-              </p>
-              <ul>
-                <li>
-                  <strong>Tier 1</strong> — No additional cost. Up to 5
-                  registered numbers, limited to 3,000 messages per day
-                  (1,000 to T-Mobile).
-                </li>
-                <li>
-                  <strong>Tier 2</strong> — Paid feature. Up to 5,000
-                  registered numbers, more than 3,000 messages per day.
-                </li>
-              </ul>
+              <h2>An unusual project for our team</h2>
+              <p>My team was normally focused on billing and timekeeping. We picked this up because we were the only team with bandwidth at the time — which meant stepping into unfamiliar territory quickly and getting up to speed on a technically complex regulatory requirement without much runway.</p>
+              <p>The scope was significant. Every org within the Filevine platform needed to register their business, and every phone number used for texting needed to be registered individually. There were two registration tiers — one free with a daily message cap, one paid with higher limits — and the experience needed to handle both clearly without overwhelming users who would mostly just need the free tier.</p>
 
               <div class="cs-callout">
-                <p>
-                  "We had 5 weeks to design a solution that would let users
-                  register their business and numbers before the regulation
-                  took effect — or customers would face service disruptions."
-                </p>
+                <p><strong>The constraint that shaped everything:</strong> This wasn't a feature customers were asking for — it was something they had to do. The design job was to make a mandatory compliance process feel as simple and low-friction as possible, so firms could get registered and get back to work.</p>
               </div>
             </div>
 
             <div class="cs-section reveal" id="process">
               <div class="cs-divider"></div>
-              <h2>Process</h2>
-              <p>
-                Because this was a brand-new interaction, I started by
-                brainstorming a user flow map. The majority of users would
-                only need Tier 1. The existing Manage Org Phone Numbers
-                section had all phone numbers — texting and fax — in one
-                place. We decided to split them into two separate tabs and
-                add a dedicated registration tab.
-              </p>
+              <h2>How I approached it</h2>
+              <p>Because this was a brand new interaction with no existing pattern to reference, I started by mapping out the full user flow. Most users would only need Tier 1 registration, so I wanted to make sure the default path was clean and straightforward, with the paid tier available but not in the way.</p>
+              <p>The existing phone number management section had texting and fax numbers combined in one view — not ideal for what we needed. I restructured it into two separate tabs and added a dedicated registration tab, which gave us a clear place to surface registration status and guide users through the process without disrupting the existing functionality.</p>
+              <p>Given the timeline and the stakes, I moved through multiple rounds of design reviews quickly — including executive reviews directly with the CEO and Sr. Director of Technology. That level of visibility wasn't typical for our team, but this project warranted it. Those reviews were genuinely useful — they kept us aligned on the right problems and gave us a fast feedback loop that compressed what would normally take much longer.</p>
+              <p>The bulk of the five weeks went into high-fidelity designs, prototyping, and refining the UX copy. Getting the language right mattered a lot here — registration flows live or die on whether users understand what's being asked of them at each step.</p>
 
               <figure class="cs-image-block">
-                <!-- Replace with: <img src="assets/images/a2p-user-flow.jpg" alt="User Flow"> -->
+                <!-- Replace with: <img src="assets/images/a2p-designs.png" alt="A2P Registration Flow"> -->
                 <div class="cs-image-placeholder">
-                  Add user flow — assets/images/a2p-user-flow.jpg
+                  Add registration flow designs — assets/images/a2p-designs.png
                 </div>
-                <figcaption>User flow mapping org registration and number registration</figcaption>
+                <figcaption>High-fidelity registration flow — org and phone number registration</figcaption>
               </figure>
-
-              <p>
-                After mapping the user flows for both org and number
-                registration, I moved to sketching and wireframes to
-                understand the design of the solution.
-              </p>
-
-              <figure class="cs-image-block">
-                <!-- Replace with: <img src="assets/images/a2p-wireframes.jpg" alt="Wireframes"> -->
-                <div class="cs-image-placeholder">
-                  Add wireframes — assets/images/a2p-wireframes.jpg
-                </div>
-                <figcaption>Wireframes exploring the registration flow</figcaption>
-              </figure>
-
-              <p>
-                Because this was a high-priority project on a very tight
-                timeline, I went through multiple design reviews — including
-                executive design reviews with C-level executives — to make
-                sure we were solving the correct issues and moving in the
-                right direction. After final approval from the CEO and Sr.
-                Director of Technology, I began high-fidelity design.
-              </p>
             </div>
 
             <div class="cs-section reveal" id="design-system">
               <div class="cs-divider"></div>
-              <h2>Design System Contribution</h2>
-              <p>
-                While designing, I ran into an issue: I needed a notification
-                banner to show different statuses — including an error state
-                for when an org is not registered — but this component didn't
-                exist in our design system.
-              </p>
-              <p>
-                I went through many variations of notification banners to find
-                one that felt consistent with the rest of the system. Working
-                with a senior designer on my team, we created a banner
-                component with multiple states that we felt fit well with our
-                existing design system — a component that could be reused
-                beyond this project.
-              </p>
-              <p>
-                Completing high-fidelity designs and prototypes — with quite a
-                few variations and multiple rounds of UX copy editing — was
-                where I spent the bulk of the 5 weeks.
-              </p>
-
-              <figure class="cs-image-block">
-                <!-- Replace with: <img src="assets/images/a2p-high-fi.png" alt="High Fidelity Designs"> -->
-                <div class="cs-image-placeholder">
-                  Add high-fidelity designs — assets/images/a2p-high-fi.png
-                </div>
-                <figcaption>Final high-fidelity designs including the new notification banner component</figcaption>
-              </figure>
+              <h2>A design system contribution I didn't expect</h2>
+              <p>One of the trickier design problems on this project wasn't the registration flow itself — it was figuring out how to communicate registration status clearly across different states. Users needed to know whether their org was registered, pending, failed, or unregistered, and that information needed to be visible and consistent throughout the section.</p>
+              <p>We didn't have a notification banner in our design system that could handle multiple states like this. I went through a lot of iterations trying to get it right — something that felt native to the product rather than bolted on. With input from a senior designer on the team, we landed on a pattern that worked.</p>
+              <p>What I didn't expect was that the banner ended up being adopted into the broader design system as a new pattern for other teams to use. A component that started as a problem I needed to solve for one project ended up contributing something lasting to the product.</p>
             </div>
 
-            <div class="cs-section reveal" id="solution">
+            <div class="cs-section reveal" id="outcome">
               <div class="cs-divider"></div>
-              <h2>Solution</h2>
-              <p>
-                The final solution allowed org admins to register their
-                business (each org within the platform) and register each of
-                their numbers directly within Filevine's Advanced Tools
-                section — without leaving the application.
-              </p>
-              <p>
-                The restructured phone number management section split texting
-                numbers, fax numbers, and registration into distinct tabs,
-                making the workflow clearer and reducing the risk of
-                accidentally affecting unregistered numbers.
-              </p>
-            </div>
+              <h2>How it landed</h2>
+              <p>We shipped within the five-week window. Hundreds of Filevine customers were able to register their organizations and phone numbers before the carrier regulations took effect — with no service disruptions. For firms that relied on SMS to communicate with clients, that continuity was the whole point.</p>
+              <p>For a project that came to our team unexpectedly, required working outside our usual domain, and carried a hard external deadline, delivering a complete, polished solution on time felt like a real win — for the team and for our customers.</p>
 
-            <div class="cs-section reveal" id="results">
-              <div class="cs-divider"></div>
-              <h2>Results</h2>
-              <p>
-                Although this was a very large ask with a quick timeline, we
-                delivered a finished solution within the 5-week window with no
-                glaring issues. Existing customers were able to register both
-                their orgs and numbers with no service interruptions.
-              </p>
-
-              <div class="stats-row">
-                <div class="stat-card">
-                  <p class="stat-number">5wk</p>
-                  <p class="stat-label">From kickoff to shipped solution</p>
+              <div class="cs-metrics">
+                <div class="cs-metric">
+                  <span class="cs-metric-number">5</span>
+                  <span class="cs-metric-label">Weeks from brief to shipped</span>
                 </div>
-                <div class="stat-card">
-                  <p class="stat-number">0</p>
-                  <p class="stat-label">Service disruptions for existing customers</p>
+                <div class="cs-metric">
+                  <span class="cs-metric-number">100s</span>
+                  <span class="cs-metric-label">Of law firms registered before the carrier deadline</span>
                 </div>
-                <div class="stat-card">
-                  <p class="stat-number">+1</p>
-                  <p class="stat-label">New design system component shipped</p>
+                <div class="cs-metric">
+                  <span class="cs-metric-number">0</span>
+                  <span class="cs-metric-label">Service disruptions for Filevine customers</span>
+                </div>
+                <div class="cs-metric">
+                  <span class="cs-metric-number">1</span>
+                  <span class="cs-metric-label">New design system component adopted platform-wide</span>
                 </div>
               </div>
+            </div>
 
-              <p style="margin-top: 1.5rem;">
-                <a href="#" class="btn btn-outline">View Full Prototype ↗</a>
-              </p>
+            <div class="cs-section reveal" id="reflection">
+              <div class="cs-divider"></div>
+              <h2>What I took away</h2>
+              <p>This project is a good example of a type of design work that doesn't always get talked about — the kind where the problem isn't interesting, the timeline is brutal, and the success condition is just that nothing breaks for your customers. There's real craft in making that kind of work feel effortless to the people using it.</p>
+              <p>It also reinforced something I believe pretty strongly: tight timelines and executive scrutiny aren't obstacles to good design — they're just different constraints to work within. You move faster, you prioritize harder, and you make sure every decision you make is one you can defend.</p>
             </div>
 
           </article>

@@ -4,10 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bulk Invoicing — Amy MacDonald</title>
-  <meta name="description" content="Research revealed the real need wasn't batch invoicing — redesigning the flow to let users create multiple invoices in a single bulk action at Filevine.">
+  <meta name="description" content="How a competitor-driven feature request turned into a research-led pivot — and a better product decision. Filevine, LegalTech.">
+  <meta property="og:title" content="Bulk Invoicing — Amy MacDonald">
+  <meta property="og:description" content="How a competitor-driven feature request turned into a research-led pivot — and a better product decision.">
+  <meta property="og:image" content="https://amymacd-design.com/assets/images/og-image.jpg">
+  <meta property="og:url" content="https://amymacd-design.com/bulk-invoicing.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/images/Favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,9 +22,9 @@
   <!-- NAV -->
   <header class="site-header">
     <nav class="nav container">
-      <a href="index.html" class="nav-logo">Amy <span>MacDonald</span></a>
+      <a href="index.html" class="nav-logo"><img src="assets/images/Favicon.svg" alt="" class="nav-logo-icon">Amy <span>MacDonald</span></a>
       <ul class="nav-links">
-        <li><a href="index.html#work">Work</a></li>
+        <li><a href="work.html">Work</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="assets/resume.pdf" target="_blank" rel="noopener" class="nav-cta">Resume</a></li>
       </ul>
@@ -32,7 +39,7 @@
     <!-- HERO -->
     <section class="cs-hero">
       <div class="container">
-        <a href="index.html" class="cs-back">
+        <a href="work.html" class="cs-back">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
           All Work
         </a>
@@ -55,14 +62,23 @@
           </div>
           <div class="cs-meta-item">
             <span class="cs-meta-label">Type</span>
-            <span class="cs-meta-value">UX Redesign · Feature</span>
+            <span class="cs-meta-value">Feature · Research Pivot</span>
+          </div>
+          <div class="cs-meta-item">
+            <span class="cs-meta-label">Timeline</span>
+            <span class="cs-meta-value">~1 Month</span>
           </div>
         </div>
 
+        <div class="cs-tldr">
+          <span class="cs-tldr-label">TL;DR</span>
+          <p>Leadership wanted batch invoicing because competitors had it. My PM and I decided to validate before building. Testing proved the premise wrong. We pivoted to bulk invoicing, presented to stakeholders, and shipped it in two development cycles.</p>
+        </div>
+
         <div class="cs-hero-image">
-          <!-- Replace with: <img src="assets/images/bulk-invoicing-header.png" alt="Bulk Invoicing"> -->
+          <!-- Replace with: <img src="assets/images/bulk-invoicing-cover.png" alt="Bulk Invoicing"> -->
           <div class="cs-image-placeholder" style="aspect-ratio:16/7;">
-            Add header image — assets/images/bulk-invoicing-header.png
+            Add header image — assets/images/bulk-invoicing-cover.png
           </div>
         </div>
       </div>
@@ -77,12 +93,11 @@
           <aside class="cs-sidebar">
             <nav>
               <ul class="cs-nav">
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#process">Process</a></li>
-                <li><a href="#testing">Validation Testing</a></li>
+                <li><a href="#starting-point">The Starting Point</a></li>
+                <li><a href="#first-direction">First Direction</a></li>
+                <li><a href="#testing">Testing</a></li>
                 <li><a href="#pivot">Changing Direction</a></li>
-                <li><a href="#solution">Solution</a></li>
-                <li><a href="#result">Result</a></li>
+                <li><a href="#reflection">Reflection</a></li>
               </ul>
             </nav>
           </aside>
@@ -90,38 +105,18 @@
           <!-- Content -->
           <article class="cs-content">
 
-            <div class="cs-section reveal" id="overview">
+            <div class="cs-section reveal" id="starting-point">
               <div class="cs-divider"></div>
-              <h2>Overview</h2>
-              <p>
-                One of the initiatives the UX team worked on was a redesign
-                and "refresh" of the application. I worked as the designated
-                designer for all sections related to billing.
-              </p>
-              <p>
-                In order to make the application more user-friendly and more
-                competitive, it was determined that the refresh needed to
-                include the ability to create batch invoices in the Advanced
-                Billing section. What followed was a lesson in letting research
-                drive direction — even when it means changing course midway.
-              </p>
+              <h2>The starting point</h2>
+              <p>This project came out of a broader UX refresh of Filevine's application — a push to modernize the product and close gaps with competitors. I was the designated designer for everything billing-related. One of the specific asks from leadership was batch invoicing: competitors had it, we didn't, and the assumption was that we needed to build it.</p>
+              <p>My PM and I could have just executed on that. Instead, we decided to validate it first. That instinct ended up being the most important decision on the project.</p>
             </div>
 
-            <div class="cs-section reveal" id="process">
+            <div class="cs-section reveal" id="first-direction">
               <div class="cs-divider"></div>
-              <h2>Process</h2>
-              <p>
-                To create designs, I did competitive research for batch
-                invoicing, primarily using QuickBooks as well as other
-                accounting software as inspiration for how to incorporate batch
-                invoices into Filevine.
-              </p>
-              <p>
-                I was able to build out a full interaction, allowing the
-                creation of batch invoices from unbilled items. I went straight
-                to high-fidelity designs, as we had plans to do validation
-                testing with current customers.
-              </p>
+              <h2>The first direction</h2>
+              <p>I started by doing competitive research — primarily looking at QuickBooks and a few other accounting tools to understand how batch invoicing typically worked and how it might fit into Filevine's existing billing workflows. From there I built out a full high-fidelity prototype for batch invoice creation from unbilled items.</p>
+              <p>Going straight to high-fidelity was a deliberate call — we had validation testing planned, so the goal was to put something concrete in front of customers as quickly as possible. In retrospect, earlier lo-fi testing might have surfaced what we found sooner and saved some design time. That's something I've carried into how I approach validation since.</p>
 
               <figure class="cs-image-block">
                 <!-- Replace with: <img src="assets/images/batch-high-fi.png" alt="Batch Billing High Fidelity Designs"> -->
@@ -130,76 +125,46 @@
                 </div>
                 <figcaption>High-fidelity batch billing designs built for validation testing</figcaption>
               </figure>
-
-              <div class="cs-callout">
-                <p>
-                  "In hindsight, going straight to high-fidelity was likely a
-                  mistake — our validation testing proved we didn't truly
-                  understand our customers' needs."
-                </p>
-              </div>
             </div>
 
             <div class="cs-section reveal" id="testing">
               <div class="cs-divider"></div>
-              <h2>Validation Testing</h2>
-              <p>
-                Our UX researcher, product owner, and I did validation testing
-                with 5 current customers, walking them through our Batch
-                Billing prototype. We asked probing questions about how they
-                would expect certain interactions to work, what they liked and
-                didn't like, and whether this would solve the issues they were
-                currently facing.
-              </p>
-              <p>
-                All five customers interviewed mentioned that they didn't see
-                the need for grouping invoices together in a batch — but they
-                loved the option to create multiple invoices at once.
-              </p>
-              <p>
-                Through testing, we realized that creating invoices and
-                grouping them within a batch was not something customers would
-                need. The majority of the time, the admin in charge of invoices
-                would go into unbilled items and create invoices for anything
-                unbilled. In the product's current state, they had to go
-                project by project and do this one by one. Batching wouldn't
-                solve this problem, and could risk making it harder to find and
-                view particular invoices.
-              </p>
+              <h2>What testing told us</h2>
+              <p>Our UX researcher, my PM, and I ran validation sessions with five current customers, walking them through the batch billing prototype. We asked how they'd expect certain interactions to work, what resonated, what didn't, and whether this actually solved the problems they were running into in the product today.</p>
+              <p>The feedback was consistent across all five sessions: customers didn't need to group invoices into batches. What they actually needed was the ability to create multiple invoices at once — without having to go project by project, one at a time, the way the product currently worked.</p>
 
-              <div class="stats-row">
-                <div class="stat-card">
-                  <p class="stat-number">5</p>
-                  <p class="stat-label">Customers interviewed in validation testing</p>
+              <div class="cs-callout">
+                <p><strong>The real problem:</strong> Admins managing invoices needed to act on everything unbilled in one go. The current product forced them to do it project by project. Batch billing — grouping invoices together — didn't solve that. Bulk creation did.</p>
+              </div>
+
+              <p>It was a meaningful distinction, and one we wouldn't have caught without testing. The feature leadership had asked for wasn't wrong in spirit — it was trying to solve a real pain point — it was just solving it in the wrong way.</p>
+
+              <div class="cs-metrics">
+                <div class="cs-metric">
+                  <span class="cs-metric-number">5</span>
+                  <span class="cs-metric-label">Customers interviewed in validation testing</span>
                 </div>
-                <div class="stat-card">
-                  <p class="stat-number">0</p>
-                  <p class="stat-label">Customers who needed batch grouping</p>
+                <div class="cs-metric">
+                  <span class="cs-metric-number">0</span>
+                  <span class="cs-metric-label">Customers who needed batch grouping</span>
                 </div>
-                <div class="stat-card">
-                  <p class="stat-number">5/5</p>
-                  <p class="stat-label">Customers who wanted bulk creation</p>
+                <div class="cs-metric">
+                  <span class="cs-metric-number">5/5</span>
+                  <span class="cs-metric-label">Customers who wanted bulk creation instead</span>
+                </div>
+                <div class="cs-metric">
+                  <span class="cs-metric-number">2</span>
+                  <span class="cs-metric-label">Development cycles to ship the final solution</span>
                 </div>
               </div>
             </div>
 
             <div class="cs-section reveal" id="pivot">
               <div class="cs-divider"></div>
-              <h2>Changing Direction</h2>
-              <p>
-                My product owner and I decided to pivot — taking the design
-                work I had already done and scaling it back from batch billing
-                to bulk invoicing. Fortunately, I had already done the majority
-                of the work, and making the transition wasn't difficult.
-              </p>
-              <p>
-                After completing the second round of design work focused on
-                the bulk action of creating invoices from unbilled items, we
-                hoped to do another round of validation testing. Unfortunately,
-                we struggled to find willing participants for testing
-                interviews. We tried unmoderated testing through Maze, but
-                received no response.
-              </p>
+              <h2>Changing direction</h2>
+              <p>My PM and I took what we learned and made the call to pivot. Rather than scrapping the work entirely, we scaled back the batch billing design to become bulk invoicing — the ability to create invoices for all unbilled items at once, without any grouping or batching logic. Because most of the foundational design work was already done, the pivot wasn't a heavy lift.</p>
+              <p>We had hoped to run another round of validation on the updated direction, but struggled to recruit participants — unmoderated testing through Maze didn't get traction either. It wasn't ideal, but the signal from the first round of testing was clear enough that we felt confident moving forward.</p>
+              <p>We presented the solution at Filevine's betting table — a stakeholder review with the head of product and key decision makers — and it was accepted for development. Given the six-week development cycle, we scoped it into two phases: the unbilled tab first, then the invoices tab in a follow-on cycle.</p>
 
               <figure class="cs-image-block">
                 <!-- Replace with: <img src="assets/images/bulk-high-fi.png" alt="Bulk Invoicing High Fidelity Designs"> -->
@@ -210,56 +175,11 @@
               </figure>
             </div>
 
-            <div class="cs-section reveal" id="solution">
+            <div class="cs-section reveal" id="reflection">
               <div class="cs-divider"></div>
-              <h2>Solution</h2>
-              <p>
-                The final design enabled admins to navigate to unbilled items
-                and create invoices for all unbilled entries across projects in
-                a single bulk action — eliminating the need to go project by
-                project.
-              </p>
-              <p>
-                Rather than grouping invoices into a named batch (which
-                customers didn't need), the solution focused on speed and
-                simplicity: select all, create invoices, done.
-              </p>
-            </div>
-
-            <div class="cs-section reveal" id="result">
-              <div class="cs-divider"></div>
-              <h2>Result</h2>
-              <p>
-                Despite the lack of a second round of customer feedback, we
-                felt strongly that the new direction addressed the issues raised
-                in our initial testing interviews. We presented it to
-                Filevine's betting table, where the solution was accepted to go
-                into development.
-              </p>
-              <p>
-                Given Filevine's 6-week development cycles, the solution was
-                broken into two phases: first building out the unbilled tab,
-                then moving to the invoices tab in a second cycle.
-              </p>
-
-              <div class="stats-row">
-                <div class="stat-card">
-                  <p class="stat-number">✓</p>
-                  <p class="stat-label">Accepted at the betting table</p>
-                </div>
-                <div class="stat-card">
-                  <p class="stat-number">2</p>
-                  <p class="stat-label">Development cycles to ship</p>
-                </div>
-                <div class="stat-card">
-                  <p class="stat-number">6wk</p>
-                  <p class="stat-label">Per development cycle</p>
-                </div>
-              </div>
-
-              <p style="margin-top: 1.5rem;">
-                <a href="#" class="btn btn-outline">View Full Bulk Invoicing Prototype ↗</a>
-              </p>
+              <h2>What I took away</h2>
+              <p>The thing I keep coming back to with this project is how easy it would have been to just build what we were asked to build. Batch invoicing was on the roadmap, competitors had it, and there was a clear brief. Pushing to validate first wasn't the path of least resistance.</p>
+              <p>But that validation session is what made the difference between shipping something customers would have ignored and shipping something that actually solved their problem. Good process doesn't always mean more time — sometimes it just means asking the right question before you start building.</p>
             </div>
 
           </article>
