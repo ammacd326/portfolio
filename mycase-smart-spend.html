@@ -103,45 +103,45 @@
 
             <div class="cs-section reveal" id="problem">
               <div class="cs-divider"></div>
-              <h2>The problem</h2>
+              <h2>The problem.</h2>
               <p>Law firms lose money on expenses all the time — not out of negligence, but because the process of managing them is genuinely broken. Attorneys are manually combing through credit card statements, hunting for receipts, logging the same expense in multiple systems, and trying to remember which charges were billable to which client. One attorney we spoke with estimated she spent close to 100 hours a year on it.</p>
               <p>The financial risk isn't just inconvenient — it's real. Miss a reimbursable expense and that money comes straight out of the firm. For smaller practices, that kind of leakage adds up in a way that actually matters.</p>
-              <p>What surprised me in our research was that no one had built something specifically for how law firms work. There were general spend management tools, but nothing that understood the relationship between an expense and a client matter, or that connected to the software law firms already lived in every day. That gap was the opportunity — and it became AffiniPay's top strategic priority for over two years.</p>
-              <p>I was brought in as the sole designer to build it from scratch.</p>
+              <p>What surprised me in our research was that no one had built something specifically for how law firms work. There were general spend management tools, but nothing that understood the relationship between an expense and a client matter, or that connected to the software law firms already lived in every day. That gap was the opportunity — and it became AffiniPay's top strategic priority for over two years. I was brought in as the sole designer to build it from scratch.</p>
             </div>
 
             <div class="cs-section reveal" id="research">
               <div class="cs-divider"></div>
-              <h2>Getting the research right before designing anything</h2>
-              <p>My product manager led the initial discovery — over 25 customer interviews with attorneys, paralegals, office managers, and firm owners. My job was to make sure what we learned actually shaped what we built, not just informed a slide deck.</p>
-              <p>What I took from those research sessions wasn't just a list of pain points. It was an understanding of who was carrying this burden, how much of their time it was eating, and — honestly — how much anxiety it created. These weren't minor workflow frustrations. Firm owners talked about the fear of missing a billable expense. Office managers described the chaos of coordinating receipts across entire teams.</p>
+              <h2>Getting the research right before designing anything.</h2>
+              <p>My PM led the initial discovery — over 25 customer interviews with attorneys, paralegals, office managers, and firm owners. My job was to make sure what we learned actually shaped what we built, not just informed a slide deck.</p>
+              <p>What I took from those sessions wasn't a list of pain points. It was an understanding of who was carrying this burden, how much of their time it was eating, and how much anxiety it created.</p>
+              <p>These weren't minor workflow frustrations. Firm owners talked about the fear of missing a billable expense. Office managers described the chaos of coordinating receipts across entire teams.</p>
               <blockquote class="cs-pullquote">
                 <p>"I live in abject terror of you forgetting to put this in the database, because if you do, I will not get paid back. And if I gave away $700 to make $550, we're all going to be unemployed."</p>
                 <cite>— Firm Owner, Real Estate Law</cite>
               </blockquote>
-              <p>That emotional weight shaped how we framed our MVP. We weren't just solving an efficiency problem — we were giving people a way to feel in control of their firm's money. That distinction ended up influencing a lot of design decisions down the line.</p>
+              <p>That emotional weight shaped how we framed our MVP. We weren't just solving an efficiency problem — we were giving people a way to feel in control of their firm's money. That distinction influenced a lot of design decisions down the line.</p>
               <p>Alongside the customer work, I did a deep competitive analysis of spend management products outside of legal — Ramp, Divvy, Stripe, Float — looking at onboarding, card management, real-time notifications, receipt workflows, and categorization. The goal was to understand what modern financial tooling looked like, then figure out where we needed to go further for a legal-specific audience.</p>
             </div>
 
             <div class="cs-section reveal" id="design">
               <div class="cs-divider"></div>
-              <h2>Designing for a multi-role, multi-platform product</h2>
-              <p>One of the things that made this project genuinely complex was the range of users I was designing for simultaneously. Smart Spend isn't a single-role tool. A paralegal capturing a transaction on their phone has completely different needs than an office manager reviewing firm-wide spend on a desktop dashboard, or an accountant reconciling expenses at month end.</p>
-              <p>Early on, I mapped out distinct user journeys for each role — cardholder mobile flows, admin desktop management, expense linking to matters in their law practice management software, reporting, and accounting sync. Keeping those experiences coherent individually while making the product feel like one unified thing was a constant design challenge.</p>
+              <h2>Designing for a multi-role, multi-platform product.</h2>
+              <p>Smart Spend isn't a single-role tool. A paralegal capturing a transaction on their phone has completely different needs than an office manager reviewing firm-wide spend on a desktop dashboard, or an accountant reconciling expenses at month end.</p>
+              <p>Early on I mapped out distinct user journeys for each role — cardholder mobile flows, admin desktop management, expense linking to matters, reporting, and accounting sync. Keeping those experiences coherent individually while making the product feel like one unified thing was a constant design challenge.</p>
               <p>The insight that shaped the mobile experience most was simple: expense capture has to happen in the moment or it doesn't happen at all. Attorneys aren't going to sit down at the end of the week and reconstruct what they spent. So we built an SMS-triggered notification flow that prompts cardholders to link a transaction right when it happens — immediately after a charge goes through. That interaction became one of the defining features of the product.</p>
               <blockquote class="cs-pullquote">
-                <p>"I always forget to link stuff. Having something that pops up and basically puts it in front of my face is friggin awesome. That's what I like about the expense thing."</p>
+                <p>"I always forget to link stuff. Having something that pops up and basically puts it in front of my face is friggin awesome."</p>
                 <cite>— Solo Practitioner, Administrative and Criminal Law</cite>
               </blockquote>
             </div>
 
             <div class="cs-section reveal" id="testing">
               <div class="cs-divider"></div>
-              <h2>Testing and iterating — under real pressure</h2>
-              <p>I owned all of the usability testing throughout this project. Planning studies, recruiting participants, running sessions, synthesizing findings, turning those findings into design decisions — that was all me, across two formal rounds of testing and then continuously through alpha and beta.</p>
-              <p>Round one was 23 usability tests focused on admin workflows: the desktop dashboard, transaction management, card issuance, and user permissions. Round two shifted to the individual cardholder experience on mobile — 11 sessions digging into the day-to-day transaction flow.</p>
-              <p>What made this unusually high-stakes: our CEO and CFO were among our alpha testers. I was designing a product that the company's executive team would be using and scrutinizing firsthand. That's a different kind of pressure than typical user testing, and it pushed me to be extremely deliberate — every decision needed to be defensible with evidence, not just intuition.</p>
-              <p>The feedback across rounds was strong, but it gave us specific things to act on. Users wanted more context on the expense linking page, more detail in transaction tables, and a clearer separation between raw bank data and the expense details they were adding themselves. Those felt like small changes but made a real difference in how confident users felt using the product.</p>
+              <h2>Testing and iterating — under real pressure.</h2>
+              <p>I owned all of the usability testing throughout this project. Planning studies, recruiting participants, running sessions, synthesizing findings, turning those findings into design decisions — all me, across two formal rounds and then continuously through alpha and beta.</p>
+              <p>Round one: 23 usability tests focused on admin workflows — the desktop dashboard, transaction management, card issuance, and user permissions. Round two shifted to the individual cardholder experience on mobile — 11 sessions on the day-to-day transaction flow.</p>
+              <p>What made this unusually high-stakes: our CEO and CFO were among our alpha testers. I was designing a product that the company's executive team would be using and scrutinizing firsthand. Every decision needed to be defensible with evidence, not just intuition.</p>
+              <p>The feedback across rounds was strong but specific. Users wanted more context on the expense linking page, more detail in transaction tables, and a clearer separation between raw bank data and the expense details they were adding themselves. Small changes that made a real difference in how confident users felt.</p>
               <div class="cs-metrics">
                 <div class="cs-metric">
                   <span class="cs-metric-number">72</span>
@@ -160,24 +160,23 @@
                   <span class="cs-metric-label">Total usability test sessions across two formal rounds of testing</span>
                 </div>
               </div>
-              <p>The early adoption numbers told a clear story — firms weren't just signing up, they were actually using it. An average of 22 transactions per activated card in the first month isn't passive onboarding. That's a product people integrated into how they work right away.</p>
+              <p>The early adoption numbers told a clear story — firms weren't just signing up, they were actually using it. 22 transactions per activated card in the first month isn't passive onboarding. That's a product people integrated into how they work right away.</p>
             </div>
 
             <div class="cs-section reveal" id="constraints">
               <div class="cs-divider"></div>
-              <h2>The real constraints</h2>
-              <p>I want to be honest about what made this project hard, because navigating those constraints was as much a part of the work as the design itself.</p>
+              <h2>The real constraints.</h2>
               <div class="cs-constraints">
                 <div class="cs-constraint">
-                  <h3>A design system being built in real time</h3>
+                  <h3>A design system being built in real time.</h3>
                   <p>AffiniPay was mid-rebrand, unifying all products under a new design system that was still being built while I was designing Smart Spend. I was effectively the guinea pig — designing with components that weren't finished, and sometimes ahead of the system entirely.</p>
                 </div>
                 <div class="cs-constraint">
-                  <h3>External banking partners</h3>
+                  <h3>External banking partners.</h3>
                   <p>Smart Spend required deep integration with external banking and card-issuing partners. Aligning on timelines was genuinely difficult and directly impacted our release schedule in ways that were outside anyone's control.</p>
                 </div>
                 <div class="cs-constraint">
-                  <h3>One designer for everything</h3>
+                  <h3>One designer for everything.</h3>
                   <p>I was the only designer and researcher on the product for the full 2.5 years. Every decision — from product strategy to final pixel — ran through me. That meant being very clear about what to prioritize and when to move fast versus slow down and get it right.</p>
                 </div>
               </div>
@@ -185,8 +184,8 @@
 
             <div class="cs-section reveal" id="outcome">
               <div class="cs-divider"></div>
-              <h2>Where it landed</h2>
-              <p>By the time I transitioned off the project, Smart Spend had moved through alpha and beta with strong engagement, a waitlist of over 200 firms, and a 72 SUS score that validated the product was genuinely usable — not just functional. The press coverage reflected what we set out to do: build something that didn't exist before.</p>
+              <h2>Where it landed.</h2>
+              <p>By the time I transitioned off the project, Smart Spend had moved through alpha and beta with strong engagement, a waitlist of over 200 firms, and a 72 SUS score that validated the product was genuinely usable — not just functional.</p>
               <div class="cs-press">
                 <div class="cs-press-item">
                   <strong>Law Next</strong>
@@ -208,7 +207,7 @@
 
             <div class="cs-section reveal" id="reflection">
               <div class="cs-divider"></div>
-              <h2>What I took away</h2>
+              <h2>What I took away.</h2>
               <p>This project is the one I'll point to when someone asks what I'm capable of. Not because everything went perfectly — it didn't — but because it required me to operate across every dimension of product design at once, under real pressure, with real stakes.</p>
               <p>Owning research, testing, systems thinking, stakeholder communication, and execution simultaneously changes how you make decisions. You can't throw problems over a wall to someone else. You have to hold all of it, figure out what matters most, and keep moving.</p>
               <p>The thing I'm proudest of isn't a specific screen. It's that we built something genuinely new for an industry that had been ignored by design for too long — and that firms were lining up to use it before it even shipped.</p>
