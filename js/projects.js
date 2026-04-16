@@ -20,8 +20,8 @@ const PROJECTS = [
   {
     href: 'ai-smart-check.html',
     image: 'p5',
-    imgSrc: 'assets/images/ai-smart-check-card-sm.png',
-    imgSrcFeatured: 'assets/images/ai-smart-check-card-lg.png',
+    imgSrc: 'assets/images/JN Smart Check - WORK CARD - Small.png',
+    imgSrcFeatured: 'assets/images/JN Smart Check - WORK CARD - Large.png',
     imgAlt: 'AI Smart Check',
     tags: ['Product Design', 'AI'],
     company: 'JobNimbus',

@@ -428,6 +428,12 @@ h2, h3, h4 {
 @media (max-width: 1024px) {
   .project-card--featured {
     grid-template-columns: 3fr 2fr;
+    height: 380px;
+  }
+  .project-card--featured .project-image {
+    aspect-ratio: unset;
+    min-height: unset;
+    height: 100%;
   }
 }
 @media (max-width: 600px) {
