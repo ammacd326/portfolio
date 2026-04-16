@@ -425,7 +425,12 @@ h2, h3, h4 {
   justify-content: center;
   padding: var(--space-2xl);
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .project-card--featured {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+@media (max-width: 600px) {
   .project-card--featured {
     grid-column: span 1;
     display: block;
