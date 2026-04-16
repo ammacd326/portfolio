@@ -840,7 +840,7 @@ h2, h3, h4 {
    CASE STUDY PAGE
    ============================================================ */
 .cs-hero {
-  padding: var(--space-2xl) 0 0;
+  padding: var(--space-lg) 0 0;
 }
 .cs-back {
   display: inline-flex;
@@ -849,7 +849,7 @@ h2, h3, h4 {
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--muted);
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-md);
   transition: color var(--trans), gap var(--trans);
 }
 .cs-back:hover { color: var(--text); gap: var(--space-sm); }
@@ -859,13 +859,13 @@ h2, h3, h4 {
   font-size: clamp(2.75rem, 5.5vw, 5rem);
   font-weight: 800;
   max-width: 18ch;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 .cs-meta-bar {
   display: flex;
   gap: var(--space-md) var(--space-xl);
   flex-wrap: wrap;
-  padding: var(--space-lg) 0;
+  padding: var(--space-md) 0;
   border-top: 1px solid var(--border);
 }
 .cs-meta-item { display: flex; flex-direction: column; gap: 4px; }
@@ -882,7 +882,7 @@ h2, h3, h4 {
   color: var(--text);
 }
 .cs-hero-image {
-  margin-top: var(--space-xl);
+  margin-top: var(--space-md);
   border-radius: var(--radius-lg);
   overflow: hidden;
   aspect-ratio: 16/7;
