@@ -89,6 +89,7 @@
               <ul class="cs-nav">
                 <li><a href="#context">The Context</a></li>
                 <li><a href="#research">Research</a></li>
+                <li><a href="#challenge">The Design Challenge</a></li>
                 <li><a href="#decisions">What to Highlight</a></li>
                 <li><a href="#process">Process</a></li>
                 <li><a href="#outcome">Outcome</a></li>
@@ -103,35 +104,36 @@
             <div class="cs-section reveal" id="context">
               <div class="cs-divider"></div>
               <h2>The context.</h2>
-              <p>Bridge was a custom platform built for Utah Foster Care — a place where UFC employees and foster parents could communicate, collaborate, and build a supportive community around foster children. The mission behind it was genuinely meaningful. The adoption problem was getting in the way of it.</p>
-              <p>UFC employees were logging in, getting confused, and going back to the tools they already knew. The feedback was consistent: people didn't understand the purpose of different sections or how to navigate the platform. And with foster parents about to be onboarded, the team didn't want to introduce a new group of users to a product that existing users were already struggling with.</p>
-              <p>We needed a solution, and we had three weeks.</p>
+              <p>Bridge was a custom platform built for Utah Foster Care — a space for UFC employees and foster parents to communicate, collaborate, and build community around foster children. The mission was genuinely meaningful. The adoption problem was getting in the way of it.</p>
+              <p>Employees were logging in, getting confused, and going back to whatever they used before. The feedback kept pointing to the same thing: people didn't understand what different sections were for or how to move around the platform. And foster parents were about to be onboarded — the team didn't want to bring a new group of users into something existing users were already struggling with.</p>
+              <p>We had three weeks to fix it.</p>
             </div>
 
             <div class="cs-section reveal" id="research">
               <div class="cs-divider"></div>
               <h2>Starting with research.</h2>
-              <p>Before jumping into designs, I wanted to understand what actually makes a product tour work — because a bad onboarding experience can be worse than no onboarding at all. I looked at a wide range of products and UI patterns, focusing on what drove comprehension and retention versus what felt like noise users would click through without reading.</p>
-              <p>That research shaped how I thought about what we were building. The goal wasn't to show users everything — it was to orient them quickly around the things that would make them feel confident enough to keep going.</p>
+              <p>My instinct before touching any designs was to figure out what actually makes a product tour work — because I'd seen enough bad onboarding to know it can make things worse, not better. The kind where there's a tooltip on every single element and you just click through all of it without reading anything.</p>
+              <p>I looked at a range of products and UI patterns, trying to understand what drove actual comprehension versus what felt like noise. That shaped my thinking pretty directly. The goal wasn't to explain everything Bridge could do — it was to get users oriented around enough that they felt confident continuing on their own.</p>
+            </div>
 
-              <div class="cs-callout">
-                <span class="cs-callout-label">The design challenge</span>
-                <p>Bridge's navigation was fully customizable — section names and icons could be changed per program. The tour had to work dynamically, pulling in whatever names UFC had chosen rather than relying on hardcoded labels. That added a layer of technical complexity that shaped what was feasible.</p>
-              </div>
+            <div class="cs-section reveal" id="challenge">
+              <div class="cs-divider"></div>
+              <h2>The design challenge.</h2>
+              <p>Bridge's navigation was fully customizable — section names and icons could be swapped per program. Which meant the tour couldn't rely on hardcoded labels. It had to pull in whatever names UFC had actually chosen, dynamically. That was a constraint I didn't fully appreciate until I started designing, and it narrowed what was technically feasible pretty quickly.</p>
             </div>
 
             <div class="cs-section reveal" id="decisions">
               <div class="cs-divider"></div>
               <h2>Deciding what to highlight.</h2>
-              <p>I worked with our product owner and UFC's customer success manager to decide which features the tour actually needed to cover. We kept the scope tight — the main navigation, how to start a chat, the key features within chat including video, and how to reach the support team.</p>
-              <p>That last one mattered more than it might seem. If users got stuck and didn't know how to get help, they'd disengage entirely. Making support visible and accessible was as important as explaining the features themselves.</p>
+              <p>I worked with our product owner and UFC's customer success manager to figure out what the tour actually needed to cover. We kept scope tight: main navigation, how to start a chat, key features within chat including video, and how to find support.</p>
+              <p>That last one I felt strongly about. If someone got stuck and didn't know where to go for help, they were going to disengage — and then we'd be back to the original problem. Making support findable wasn't an afterthought. It was part of the core job.</p>
             </div>
 
             <div class="cs-section reveal" id="process">
               <div class="cs-divider"></div>
               <h2>Working within real constraints.</h2>
-              <p>With three weeks on the clock, I brought research-informed sketches to the team early — before committing to high-fidelity work — specifically to pressure-test what was actually buildable. That conversation with the developer shaped the final design more than anything else. There were things I wanted to do that weren't feasible in the time we had, and iterating on sketches made those tradeoffs cheaper to navigate.</p>
-              <p>We went through a few rounds of iteration before landing on a final direction that worked within both the technical constraints and the timeline. From there I moved into high-fidelity designs for the finished tour.</p>
+              <p>With three weeks on the clock I didn't have the luxury of waiting until I had polished mockups to find out what was actually buildable. I brought sketches to the developer early — partly to share direction, mostly to pressure-test it. That conversation changed the design more than any review did. Some things I'd assumed were straightforward weren't, and catching that at the sketch stage was a lot cheaper than catching it later.</p>
+              <p>We iterated a few times before landing somewhere that worked within the technical constraints and the timeline. Then I moved into high-fidelity.</p>
 
               <figure class="cs-image-block">
                 <!-- Replace with: <img src="assets/images/product-tour-designs.png" alt="Product Tour Designs"> -->
@@ -145,25 +147,25 @@
             <div class="cs-section reveal" id="outcome">
               <div class="cs-divider"></div>
               <h2>How it landed.</h2>
-              <p>We shipped before the foster parent onboarding began. The tour gave both new and existing users a structured way to understand the platform from the moment they logged in — addressing the exact confusion UFC had been flagging.</p>
-              <p>The fact that it's still live today says something. A lot of quick-turnaround solutions get replaced or removed when something better comes along. This one stuck.</p>
+              <p>We shipped before the foster parent onboarding started. The tour gave both user groups — UFC employees who were already in the platform and foster parents coming in fresh — a structured starting point instead of just being dropped in and left to figure it out.</p>
+              <p>It's still live. That's the part I didn't fully expect. A lot of work that gets built under a tight deadline ends up getting replaced when there's more time to do it properly. This one held up.</p>
 
               <div class="cs-metrics">
                 <div class="cs-metric">
                   <span class="cs-metric-number">3</span>
-                  <span class="cs-metric-label">Weeks from brief to shipped</span>
+                  <span class="cs-metric-label">weeks from brief to shipped</span>
                 </div>
                 <div class="cs-metric">
                   <span class="cs-metric-number">2</span>
-                  <span class="cs-metric-label">User groups successfully onboarded — UFC employees and foster parents</span>
+                  <span class="cs-metric-label">user groups onboarded — UFC employees and foster parents</span>
                 </div>
                 <div class="cs-metric">
                   <span class="cs-metric-number">Still</span>
-                  <span class="cs-metric-label">Live today — the tour remains in production</span>
+                  <span class="cs-metric-label">live in production</span>
                 </div>
                 <div class="cs-metric">
                   <span class="cs-metric-number">1st</span>
-                  <span class="cs-metric-label">Professional project — delivered on time with real users and real stakes</span>
+                  <span class="cs-metric-label">professional project, real users, real stakes</span>
                 </div>
               </div>
             </div>
@@ -171,8 +173,8 @@
             <div class="cs-section reveal" id="reflection">
               <div class="cs-divider"></div>
               <h2>What I took away.</h2>
-              <p>This was an early project for me, and looking back, what stands out is how much the constraints forced good decisions. A three-week timeline with a hard external deadline meant I couldn't afford to over-design. Bringing sketches to the developer early instead of waiting for polished mockups saved time and surfaced problems before they became expensive. Those habits have stayed with me.</p>
-              <p>The stakes also weren't abstract. The people using this platform were foster care workers and families trying to support kids in the system. Designing something that actually helped them use a tool they needed felt like a good reason to get it right.</p>
+              <p>Looking back, this is the project that taught me to bring things to developers early. Not when they're polished — early, when they're still rough enough to actually change. I'd been defaulting to cleaning things up before sharing them, which I think was partly just wanting to look like I knew what I was doing. The three-week timeline forced me out of that and I haven't really gone back.</p>
+              <p>The other thing that stays with me is who was actually using it. Foster care workers and families navigating a hard situation. That's not an abstract user — it's a specific person with a lot going on, trying to use a tool that's supposed to help them. Getting that right felt like it mattered in a way that was different from other projects.</p>
             </div>
 
           </article>
