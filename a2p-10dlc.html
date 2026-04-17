@@ -95,6 +95,7 @@
               <ul class="cs-nav">
                 <li><a href="#situation">The Situation</a></li>
                 <li><a href="#ask">The Ask</a></li>
+                <li><a href="#constraint">The Constraint</a></li>
                 <li><a href="#process">Process</a></li>
                 <li><a href="#design-system">Design System</a></li>
                 <li><a href="#outcome">Outcome</a></li>
@@ -109,30 +110,32 @@
             <div class="cs-section reveal" id="situation">
               <div class="cs-divider"></div>
               <h2>The situation.</h2>
-              <p>In 2021, wireless carriers introduced new regulations around application-to-person SMS messaging — known as A2P 10DLC. The short version: any business sending text messages through a platform like Filevine now needed to register their use case and phone numbers with carriers, or risk their messages failing to deliver or being flagged as spam.</p>
-              <p>For law firms using Filevine to communicate with clients, that wasn't a minor inconvenience. SMS is a core part of how many firms operate. Unregistered numbers going dark would have been a real problem for hundreds of customers.</p>
-              <p>The deadline was set by the carriers — not us. We had five weeks.</p>
+              <p>In 2021, wireless carriers rolled out new regulations for application-to-person SMS — A2P 10DLC. The short version: any business sending texts through a platform like Filevine had to register their use case and phone numbers with carriers, or their messages would start failing or getting flagged as spam.</p>
+              <p>For law firms, that's not a minor thing. A lot of firms run client communication almost entirely through SMS. Numbers going dark mid-case would have been a real problem for hundreds of customers.</p>
+              <p>The deadline was set by the carriers. Not us. We had five weeks.</p>
             </div>
 
             <div class="cs-section reveal" id="ask">
               <div class="cs-divider"></div>
               <h2>An unusual project for our team.</h2>
-              <p>My team was normally focused on billing and timekeeping. We picked this up because we were the only team with bandwidth at the time — which meant stepping into unfamiliar territory quickly and getting up to speed on a technically complex regulatory requirement without much runway.</p>
-              <p>The scope was significant. Every org within the Filevine platform needed to register their business, and every phone number used for texting needed to be registered individually. There were two registration tiers — one free with a daily message cap, one paid with higher limits — and the experience needed to handle both clearly without overwhelming users who would mostly just need the free tier.</p>
+              <p>My team owned billing and timekeeping. This came to us because we were the only team with open bandwidth — which meant getting up to speed on a technically complex compliance requirement we'd never touched, fast, with no real runway.</p>
+              <p>I won't pretend that wasn't a little stressful.</p>
+              <p>The scope was bigger than it initially looked. Every org in Filevine needed to register their business. Every individual phone number used for texting needed its own registration. There were two tiers — one free with a daily cap, one paid — and the experience had to handle both without making the majority of users, who just needed the free tier, wade through complexity that didn't apply to them.</p>
+            </div>
 
-              <div class="cs-callout">
-                <span class="cs-callout-label">The constraint that shaped everything</span>
-                <p>This wasn't a feature customers were asking for — it was something they had to do. The design job was to make a mandatory compliance process feel as simple and low-friction as possible, so firms could get registered and get back to work.</p>
-              </div>
+            <div class="cs-section reveal" id="constraint">
+              <div class="cs-divider"></div>
+              <h2>The constraint that shaped everything.</h2>
+              <p>Nobody wanted to do this. It wasn't a feature request — it was a compliance requirement dropped on law firms with a hard deadline. The design job was to make it feel as painless as possible. Get registered, get out, get back to work.</p>
             </div>
 
             <div class="cs-section reveal" id="process">
               <div class="cs-divider"></div>
               <h2>How I approached it.</h2>
-              <p>Because this was a brand new interaction with no existing pattern to reference, I started by mapping out the full user flow. Most users would only need Tier 1 registration, so I wanted to make sure the default path was clean and straightforward, with the paid tier available but not in the way.</p>
-              <p>The existing phone number management section had texting and fax numbers combined in one view — not ideal for what we needed. I restructured it into two separate tabs and added a dedicated registration tab, which gave us a clear place to surface registration status and guide users through the process without disrupting the existing functionality.</p>
-              <p>Given the timeline and the stakes, I moved through multiple rounds of design reviews quickly — including executive reviews directly with the CEO and Sr. Director of Technology. That level of visibility wasn't typical for our team, but this project warranted it. Those reviews were genuinely useful — they kept us aligned on the right problems and gave us a fast feedback loop that compressed what would normally take much longer.</p>
-              <p>The bulk of the five weeks went into high-fidelity designs, prototyping, and refining the UX copy. Getting the language right mattered a lot here — registration flows live or die on whether users understand what's being asked of them at each step.</p>
+              <p>There was no existing pattern to reference, so I started by mapping the full user flow from scratch. I wanted the default path — Tier 1, free registration — to be clean enough that most users never had to think about the paid option.</p>
+              <p>The existing phone number management section had texting and fax numbers in the same view, which wasn't going to work for what we needed. I split them into separate tabs and added a dedicated registration tab — a small restructure that gave us a clean place to surface registration status without breaking what was already there.</p>
+              <p>The timeline pushed me into a review cadence I wouldn't normally have — including direct reviews with the CEO and Sr. Director of Technology. That's not typical for my team. It was useful, though. Faster feedback loops, quicker alignment, decisions that would have taken weeks happening in days.</p>
+              <p>Most of the five weeks went into high-fidelity designs, prototyping, and UX copy. The copy especially — registration flows depend entirely on users understanding what they're being asked to do at each step. Get that wrong and the whole thing falls apart.</p>
 
               <figure class="cs-image-block">
                 <!-- Replace with: <img src="assets/images/a2p-designs.png" alt="A2P Registration Flow"> -->
@@ -145,34 +148,34 @@
 
             <div class="cs-section reveal" id="design-system">
               <div class="cs-divider"></div>
-              <h2>A design system contribution I didn't expect.</h2>
-              <p>One of the trickier design problems on this project wasn't the registration flow itself — it was figuring out how to communicate registration status clearly across different states. Users needed to know whether their org was registered, pending, failed, or unregistered, and that information needed to be visible and consistent throughout the section.</p>
-              <p>We didn't have a notification banner in our design system that could handle multiple states like this. I went through a lot of iterations trying to get it right — something that felt native to the product rather than bolted on. With input from a senior designer on the team, we landed on a pattern that worked.</p>
-              <p>What I didn't expect was that the banner ended up being adopted into the broader design system as a new pattern for other teams to use. A component that started as a problem I needed to solve for one project ended up contributing something lasting to the product.</p>
+              <h2>A design system contribution I didn't see coming.</h2>
+              <p>The registration flow itself wasn't the hardest design problem. The hardest part was figuring out how to show registration status across four different states — registered, pending, failed, unregistered — in a way that was visible, consistent, and felt like it belonged in the product rather than being stapled onto it.</p>
+              <p>We didn't have a notification banner in the design system that could handle that kind of multi-state logic. I went through more iterations on that component than anything else on the project. Eventually, with input from a senior designer, we landed on something that worked.</p>
+              <p>What I didn't expect: it got picked up by other teams and pulled into the broader design system. A component I built to solve one specific problem ended up becoming a pattern the whole product uses.</p>
             </div>
 
             <div class="cs-section reveal" id="outcome">
               <div class="cs-divider"></div>
               <h2>How it landed.</h2>
-              <p>We shipped within the five-week window. Hundreds of Filevine customers were able to register their organizations and phone numbers before the carrier regulations took effect — with no service disruptions. For firms that relied on SMS to communicate with clients, that continuity was the whole point.</p>
-              <p>For a project that came to our team unexpectedly, required working outside our usual domain, and carried a hard external deadline, delivering a complete, polished solution on time felt like a real win — for the team and for our customers.</p>
+              <p>We shipped inside the five-week window. Hundreds of Filevine customers registered before the regulations hit. No service disruptions.</p>
+              <p>For firms relying on SMS to talk to clients, continuity was the whole point. They probably never thought about what it took to make sure nothing changed for them. That's fine. That's the job.</p>
 
               <div class="cs-metrics">
                 <div class="cs-metric">
                   <span class="cs-metric-number">5</span>
-                  <span class="cs-metric-label">Weeks from brief to shipped</span>
+                  <span class="cs-metric-label">weeks from brief to shipped</span>
                 </div>
                 <div class="cs-metric">
                   <span class="cs-metric-number">100s</span>
-                  <span class="cs-metric-label">Of law firms registered before the carrier deadline</span>
+                  <span class="cs-metric-label">of law firms registered before the deadline</span>
                 </div>
                 <div class="cs-metric">
                   <span class="cs-metric-number">0</span>
-                  <span class="cs-metric-label">Service disruptions for Filevine customers</span>
+                  <span class="cs-metric-label">service disruptions</span>
                 </div>
                 <div class="cs-metric">
                   <span class="cs-metric-number">1</span>
-                  <span class="cs-metric-label">New design system component adopted platform-wide</span>
+                  <span class="cs-metric-label">new design system component, now platform-wide</span>
                 </div>
               </div>
             </div>
@@ -180,8 +183,8 @@
             <div class="cs-section reveal" id="reflection">
               <div class="cs-divider"></div>
               <h2>What I took away.</h2>
-              <p>This project is a good example of a type of design work that doesn't always get talked about — the kind where the problem isn't interesting, the timeline is brutal, and the success condition is just that nothing breaks for your customers. There's real craft in making that kind of work feel effortless to the people using it.</p>
-              <p>It also reinforced something I believe pretty strongly: tight timelines and executive scrutiny aren't obstacles to good design — they're just different constraints to work within. You move faster, you prioritize harder, and you make sure every decision you make is one you can defend.</p>
+              <p>There's a category of design work nobody really talks about — where the problem is unglamorous, the timeline is brutal, and winning just means nothing breaks. I think there's real craft in that. Making a compliance flow feel simple is harder than it looks, and it doesn't come with a lot of recognition.</p>
+              <p>This project also reminded me that pressure doesn't have to be the enemy of good work. You move faster. You make harder calls sooner. Executive visibility that might feel intimidating in another context actually made the work sharper — every decision had to be defensible, and that's not a bad way to work.</p>
             </div>
 
           </article>
