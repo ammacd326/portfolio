@@ -31,7 +31,7 @@ const PROJECTS = [
   {
     href: 'mycase-smart-spend.html',
     image: 'p1',
-    imgSrc: '',
+    imgSrc: 'assets/images/SmartSpend WORK CARD (Small).png',
     imgAlt: 'MyCase Smart Spend',
     tags: ['Product Design', 'FinTech', 'LegalTech'],
     company: 'Affinipay',
@@ -41,7 +41,7 @@ const PROJECTS = [
   {
     href: 'bulk-invoicing.html',
     image: 'p2',
-    imgSrc: '',
+    imgSrc: 'assets/images/Filevine Bulk Invoicing - WORK CARD (Small).png',
     imgAlt: 'Bulk Invoicing',
     tags: ['Product Design', 'LegalTech'],
     company: 'Filevine',
@@ -51,7 +51,7 @@ const PROJECTS = [
   {
     href: 'a2p-10dlc.html',
     image: 'p3',
-    imgSrc: '',
+    imgSrc: 'assets/images/A2P 10DLC WORK CARD (Small).png',
     imgAlt: 'A2P 10DLC Registration',
     tags: ['Product Design', 'Compliance'],
     company: 'Filevine',
@@ -61,7 +61,7 @@ const PROJECTS = [
   {
     href: 'product-tour.html',
     image: 'p4',
-    imgSrc: '',
+    imgSrc: 'assets/images/UFC/Unite.ly WORK CARD (Small).png',
     imgAlt: 'Bridge Product Tour',
     tags: ['UX Design', 'Onboarding'],
     company: 'Unite.ly',
