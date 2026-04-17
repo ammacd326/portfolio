@@ -128,10 +128,9 @@ if (homeGrid) {
    ============================================================ */
 const workGrid = document.getElementById('projects-grid-all');
 if (workGrid) {
-  const nonFeatured = PROJECTS.filter(p => p.comingSoon);
   const featurable = PROJECTS.filter(p => !p.comingSoon);
   const featured = featurable[0];
-  const rest = [...featurable.slice(1), ...nonFeatured];
+  const rest = featurable.slice(1);
 
   workGrid.innerHTML =
     buildCard(featured, 0, true) +
