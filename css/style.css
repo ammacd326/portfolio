@@ -696,8 +696,7 @@ h2, h3, h4 {
    ABOUT PAGE
    ============================================================ */
 .page-hero {
-  padding: var(--space-lg) 0 var(--space-xl);
-  border-bottom: 1px solid var(--border);
+  padding: var(--space-lg) 0 var(--space-md);
 }
 .page-eyebrow {
   font-size: 0.8125rem;
@@ -724,7 +723,7 @@ h2, h3, h4 {
 }
 
 .about-body {
-  padding: var(--space-lg) 0;
+  padding: var(--space-md) 0 var(--space-lg);
 }
 .about-body-grid {
   display: grid;
