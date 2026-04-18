@@ -50,8 +50,24 @@
 
           <!-- Photo column -->
           <div style="align-self: start; position: sticky; top: 6rem;">
-            <div class="about-photo">
-              <img src="assets/images/amy-headshot.JPG" alt="Amy MacDonald">
+            <div class="about-slideshow">
+              <div class="about-slideshow-track">
+                <img src="assets/images/About Me slideshow photos/1.JPG" alt="Amy MacDonald">
+                <img src="assets/images/About Me slideshow photos/2.jpeg" alt="Amy MacDonald">
+                <img src="assets/images/About Me slideshow photos/3.jpeg" alt="Amy MacDonald">
+                <img src="assets/images/About Me slideshow photos/4.jpeg" alt="Amy MacDonald">
+                <img src="assets/images/About Me slideshow photos/5.jpeg" alt="Amy MacDonald">
+                <img src="assets/images/About Me slideshow photos/6.jpeg" alt="Amy MacDonald">
+                <img src="assets/images/About Me slideshow photos/7.jpeg" alt="Amy MacDonald">
+                <img src="assets/images/About Me slideshow photos/8.jpeg" alt="Amy MacDonald">
+                <img src="assets/images/About Me slideshow photos/9.jpeg" alt="Amy MacDonald">
+                <img src="assets/images/About Me slideshow photos/10.JPG" alt="Amy MacDonald">
+                <img src="assets/images/About Me slideshow photos/11.PNG" alt="Amy MacDonald">
+                <img src="assets/images/About Me slideshow photos/12.jpeg" alt="Amy MacDonald">
+              </div>
+              <button class="slideshow-btn slideshow-prev" aria-label="Previous photo">&#8249;</button>
+              <button class="slideshow-btn slideshow-next" aria-label="Next photo">&#8250;</button>
+              <div class="slideshow-dots"></div>
             </div>
             <p style="font-family: var(--font-display); font-size: 1.4rem; letter-spacing: 0.04em; color: var(--text); margin-top: var(--space-sm); text-align: center; line-height: 1.8;">Designer.<br>Problem solver.<br>People person.</p>
           </div>
@@ -159,5 +175,76 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    (function () {
+      const slideshow = document.querySelector('.about-slideshow');
+      if (!slideshow) return;
+
+      const track  = slideshow.querySelector('.about-slideshow-track');
+      const dotsEl = slideshow.querySelector('.slideshow-dots');
+      const prev   = slideshow.querySelector('.slideshow-prev');
+      const next   = slideshow.querySelector('.slideshow-next');
+      const total  = track.querySelectorAll('img').length;
+      let current  = 0;
+      let timer;
+      let transitioning = false;
+
+      // Clone first slide and append — enables seamless wrap-around
+      const firstClone = track.querySelector('img').cloneNode();
+      track.appendChild(firstClone);
+
+      // Build dots (one per real slide)
+      for (let i = 0; i < total; i++) {
+        const d = document.createElement('button');
+        d.className = 'slideshow-dot' + (i === 0 ? ' active' : '');
+        d.setAttribute('aria-label', 'Photo ' + (i + 1));
+        d.addEventListener('click', () => goTo(i));
+        dotsEl.appendChild(d);
+      }
+
+      function updateDots(i) {
+        dotsEl.querySelectorAll('.slideshow-dot').forEach((d, idx) =>
+          d.classList.toggle('active', idx === i)
+        );
+      }
+
+      function goTo(n, animate = true) {
+        if (transitioning) return;
+        transitioning = true;
+        current = n;
+        track.style.transition = animate ? 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)' : 'none';
+        track.style.transform = `translateX(-${current * 100}%)`;
+        updateDots(current % total);
+        resetTimer();
+      }
+
+      // After sliding to the clone, instantly snap to real first slide
+      track.addEventListener('transitionend', () => {
+        if (current === total) {
+          track.style.transition = 'none';
+          current = 0;
+          track.style.transform = 'translateX(0)';
+          updateDots(0);
+        }
+        transitioning = false;
+      });
+
+      function resetTimer() {
+        clearInterval(timer);
+        timer = setInterval(() => goTo(current + 1), 5000);
+      }
+
+      prev.addEventListener('click', () => {
+        const target = current === 0 ? total - 1 : current - 1;
+        goTo(target);
+      });
+      next.addEventListener('click', () => goTo(current + 1));
+
+      slideshow.addEventListener('mouseenter', () => clearInterval(timer));
+      slideshow.addEventListener('mouseleave', resetTimer);
+
+      resetTimer();
+    })();
+  </script>
 </body>
 </html>
