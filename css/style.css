@@ -1053,6 +1053,7 @@ h2, h3, h4 {
   background: var(--border);
 }
 .cs-image-block img { width: 100%; height: auto; }
+.cs-image-block iframe { display: block; width: 100%; }
 .cs-image-block figcaption {
   font-size: 0.875rem;
   color: var(--muted);

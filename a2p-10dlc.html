@@ -93,12 +93,10 @@
           <aside class="cs-sidebar">
             <nav>
               <ul class="cs-nav">
-                <li><a href="#situation">The Situation</a></li>
-                <li><a href="#ask">The Ask</a></li>
-                <li><a href="#constraint">The Constraint</a></li>
-                <li><a href="#process">Process</a></li>
-                <li><a href="#design-system">Design System</a></li>
-                <li><a href="#outcome">Outcome</a></li>
+                <li><a href="#situation">The Setup</a></li>
+                <li><a href="#process">How I Approached It</a></li>
+                <li><a href="#design-system">A Component</a></li>
+                <li><a href="#outcome">The Rollout</a></li>
                 <li><a href="#reflection">Reflection</a></li>
               </ul>
             </nav>
@@ -109,33 +107,21 @@
 
             <div class="cs-section reveal" id="situation">
               <div class="cs-divider"></div>
-              <h2>The situation.</h2>
-              <p>In 2021, wireless carriers rolled out new regulations for application-to-person SMS — A2P 10DLC. The short version: any business sending texts through a platform like Filevine had to register their use case and phone numbers with carriers, or their messages would start failing or getting flagged as spam.</p>
-              <p>For law firms, that's not a minor thing. A lot of firms run client communication almost entirely through SMS. Numbers going dark mid-case would have been a real problem for hundreds of customers.</p>
-              <p>The deadline was set by the carriers. Not us. We had five weeks.</p>
-            </div>
-
-            <div class="cs-section reveal" id="ask">
-              <div class="cs-divider"></div>
-              <h2>An unusual project for our team.</h2>
-              <p>My team owned billing and timekeeping. This came to us because we were the only team with open bandwidth — which meant getting up to speed on a technically complex compliance requirement we'd never touched, fast, with no real runway.</p>
-              <p>I won't pretend that wasn't a little stressful.</p>
-              <p>The scope was bigger than it initially looked. Every org in Filevine needed to register their business. Every individual phone number used for texting needed its own registration. There were two tiers — one free with a daily cap, one paid — and the experience had to handle both without making the majority of users, who just needed the free tier, wade through complexity that didn't apply to them.</p>
-            </div>
-
-            <div class="cs-section reveal" id="constraint">
-              <div class="cs-divider"></div>
-              <h2>The constraint that shaped everything.</h2>
-              <p>Nobody wanted to do this. It wasn't a feature request — it was a compliance requirement dropped on law firms with a hard deadline. The design job was to make it feel as painless as possible. Get registered, get out, get back to work.</p>
+              <h2>The setup.</h2>
+              <p>In 2021, wireless carriers rolled out new rules for application-to-person messaging — the A2P 10DLC regulations. The short version: any company sending texts through a platform like Filevine needed to register their use case and phone numbers with the carriers, or messages would start failing or getting flagged as spam.</p>
+              <p>For law firms, that's not a minor inconvenience. A lot of them run client communication almost entirely through text. If numbers went dark mid-case, the downstream impact could be significant. The carriers set the deadline, not us. We had five weeks.</p>
+              <p>It was an odd project for my team. We normally handle billing and time tracking. This landed with us because we had capacity — which meant diving into a compliance requirement we'd never touched before, fast, with no ramp-up time. I won't pretend that didn't feel like a lot at first.</p>
+              <p>The scope turned out to be bigger than it looked. Every org in Filevine had to register independently. Every phone number needed its own enrollment. There were two tiers — one free with daily sending limits, one paid — and the experience had to handle both without burying the majority of users who only needed the free path in options that didn't apply to them.</p>
+              <p>The framing that shaped everything: nobody wanted to do this. It wasn't a feature anyone asked for. It was a compliance requirement dropped on legal teams with a hard deadline. My job as the designer was to make it as painless as possible — get in, get registered, get out.</p>
             </div>
 
             <div class="cs-section reveal" id="process">
               <div class="cs-divider"></div>
               <h2>How I approached it.</h2>
-              <p>There was no existing pattern to reference, so I started by mapping the full user flow from scratch. I wanted the default path — Tier 1, free registration — to be clean enough that most users never had to think about the paid option.</p>
-              <p>The existing phone number management section had texting and fax numbers in the same view, which wasn't going to work for what we needed. I split them into separate tabs and added a dedicated registration tab — a small restructure that gave us a clean place to surface registration status without breaking what was already there.</p>
-              <p>The timeline pushed me into a review cadence I wouldn't normally have — including direct reviews with the CEO and Sr. Director of Technology. That's not typical for my team. It was useful, though. Faster feedback loops, quicker alignment, decisions that would have taken weeks happening in days.</p>
-              <p>Most of the five weeks went into high-fidelity designs, prototyping, and UX copy. The copy especially — registration flows depend entirely on users understanding what they're being asked to do at each step. Get that wrong and the whole thing falls apart.</p>
+              <p>There was no existing pattern to work from, so I mapped the full user flow from scratch. The goal for the primary path — Tier 1, the free option — was to keep it clean enough that most users never had to think about the paid tier at all.</p>
+              <p>The existing number management area combined text and fax in one place, which wasn't going to work here. I split them into separate sections and added a dedicated registration area. A small structural shift, but it let us surface status clearly without disrupting anything else in the app.</p>
+              <p>The timeline forced a communication cadence I don't usually run — direct check-ins with the CEO and technical director from early on. Not standard for our team. But it helped. Decisions that might normally take weeks got made in days. Alignment happened faster because the right people were in the loop from the start.</p>
+              <p>Most of those five weeks went into detailed mocks, testing, and writing the copy for the experience. The copy mattered as much as anything else. Registration flows live or die on whether people understand each prompt. Get that wrong and the whole thing falls apart.</p>
 
               <figure class="cs-image-block">
                 <!-- Replace with: <img src="assets/images/a2p-designs.png" alt="A2P Registration Flow"> -->
@@ -148,34 +134,33 @@
 
             <div class="cs-section reveal" id="design-system">
               <div class="cs-divider"></div>
-              <h2>A design system contribution I didn't see coming.</h2>
-              <p>The registration flow itself wasn't the hardest design problem. The hardest part was figuring out how to show registration status across four different states — registered, pending, failed, unregistered — in a way that was visible, consistent, and felt like it belonged in the product rather than being stapled onto it.</p>
-              <p>We didn't have a notification banner in the design system that could handle that kind of multi-state logic. I went through more iterations on that component than anything else on the project. Eventually, with input from a senior designer, we landed on something that worked.</p>
-              <p>What I didn't expect: it got picked up by other teams and pulled into the broader design system. A component I built to solve one specific problem ended up becoming a pattern the whole product uses.</p>
+              <h2>A component I didn't see coming.</h2>
+              <p>The registration flow itself wasn't the hardest design problem. The harder part was showing status across four states — complete, pending, failed, and none — in a way that was clear, consistent, and felt like it belonged in the app rather than bolted on.</p>
+              <p>Our design system didn't have a status banner that could handle that range. I went through more iterations on that one component than anything else in the project. Eventually, with input from a senior designer, we landed on something solid.</p>
+              <p>What happened next was unexpected: other teams picked it up and it got pulled into the broader design system. Something that started as a fix for one compliance flow became a pattern the whole app now uses.</p>
             </div>
 
             <div class="cs-section reveal" id="outcome">
               <div class="cs-divider"></div>
-              <h2>How it landed.</h2>
-              <p>We shipped inside the five-week window. Hundreds of Filevine customers registered before the regulations hit. No service disruptions.</p>
-              <p>For firms relying on SMS to talk to clients, continuity was the whole point. They probably never thought about what it took to make sure nothing changed for them. That's fine. That's the job.</p>
+              <h2>The rollout.</h2>
+              <p>We shipped in five weeks. Hundreds of Filevine users registered before the carrier deadline. No service interruptions. For firms that depend on texting for client communication, continuity was everything — and they probably never thought about what kept things running smoothly. That's fine. That's part of the job.</p>
 
               <div class="cs-metrics">
                 <div class="cs-metric">
                   <span class="cs-metric-number">5</span>
-                  <span class="cs-metric-label">weeks from brief to shipped</span>
+                  <span class="cs-metric-label">weeks from kickoff to launch</span>
                 </div>
                 <div class="cs-metric">
                   <span class="cs-metric-number">100s</span>
-                  <span class="cs-metric-label">of law firms registered before the deadline</span>
+                  <span class="cs-metric-label">of legal firms enrolled before the deadline</span>
                 </div>
                 <div class="cs-metric">
                   <span class="cs-metric-number">0</span>
-                  <span class="cs-metric-label">service disruptions</span>
+                  <span class="cs-metric-label">outages</span>
                 </div>
                 <div class="cs-metric">
                   <span class="cs-metric-number">1</span>
-                  <span class="cs-metric-label">new design system component, now platform-wide</span>
+                  <span class="cs-metric-label">new design component, now used across the full product</span>
                 </div>
               </div>
             </div>
@@ -183,8 +168,8 @@
             <div class="cs-section reveal" id="reflection">
               <div class="cs-divider"></div>
               <h2>What I took away.</h2>
-              <p>There's a category of design work nobody really talks about — where the problem is unglamorous, the timeline is brutal, and winning just means nothing breaks. I think there's real craft in that. Making a compliance flow feel simple is harder than it looks, and it doesn't come with a lot of recognition.</p>
-              <p>This project also reminded me that pressure doesn't have to be the enemy of good work. You move faster. You make harder calls sooner. Executive visibility that might feel intimidating in another context actually made the work sharper — every decision had to be defensible, and that's not a bad way to work.</p>
+              <p>Some design work stays invisible — the problem isn't flashy, the timeline is tight, and success just means nothing breaks. I think real skill lives there too. Making a compliance process feel simple takes more effort than it looks like from the outside, and it doesn't come with a lot of fanfare.</p>
+              <p>This project also showed me that constraints don't have to be the enemy of good work. You move faster. You make harder calls earlier. That executive-level visibility, which sounds stressful in theory, actually sharpened the work — every decision needed to be defensible, and that turned out to be a pretty good way to operate.</p>
             </div>
 
           </article>

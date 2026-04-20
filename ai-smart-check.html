@@ -107,10 +107,10 @@
             <div class="cs-section reveal" id="context">
               <div class="cs-divider"></div>
               <h2>Context.</h2>
-              <p>JobNimbus had a gap in supplier ordering adoption. About 22% of roofing contractors still preferred placing material orders through their supplier rep rather than through the platform.</p>
-              <p>From a business perspective: a lost transaction. From a user perspective: worth figuring out why.</p>
-              <p>The team's working hypothesis was that customers trusted their rep to catch mistakes. A good rep remembers your preferences, flags when something looks off, stops an order from going sideways before it ships. We wanted to know if we could build that into JobNimbus.</p>
-              <p>That hypothesis turned out to be partially right, partially wrong, and worth the dig.</p>
+              <p>JobNimbus had a real adoption gap in supplier ordering. Around 22% of roofing contractors were still picking up the phone to call their rep instead of placing orders through the platform.</p>
+              <p>For the business, that's revenue we never touch. For me as a designer, it was a signal worth digging into — something about the platform experience still felt riskier or harder than just calling a person.</p>
+              <p>The team's early hypothesis: people stick with reps because reps catch mistakes. A good rep knows how you work, remembers your preferences, flags a bad combo before it ships. We wanted to know if JobNimbus could fill that role.</p>
+              <p>Turns out we were half right, half off — and chasing the question was still worth it.</p>
 
               <div class="cs-metrics">
                 <div class="cs-metric">
@@ -119,7 +119,7 @@
                 </div>
                 <div class="cs-metric">
                   <span class="cs-metric-number">73%</span>
-                  <span class="cs-metric-label">of users build material orders from scratch — no upstream validation</span>
+                  <span class="cs-metric-label">of users build material orders from scratch, with no upstream validation</span>
                 </div>
                 <div class="cs-metric">
                   <span class="cs-metric-number">$85M</span>
@@ -127,7 +127,7 @@
                 </div>
                 <div class="cs-metric">
                   <span class="cs-metric-number">70</span>
-                  <span class="cs-metric-label">users surveyed to validate the research direction</span>
+                  <span class="cs-metric-label">users surveyed to pressure-test the research direction</span>
                 </div>
               </div>
             </div>
@@ -135,33 +135,33 @@
             <div class="cs-section reveal" id="research">
               <div class="cs-divider"></div>
               <h2>Research.</h2>
-              <p>Before designing anything, I needed to understand what was actually driving rep preference — not what we assumed was driving it.</p>
-              <p>I ran interviews with owners, office managers, and production managers, plus a broader survey of 70 users. I worked closely with Customer Success and Support to understand where orders broke down in the field. And I specifically sought out companies that had recently lost a trusted supplier rep — either the rep left, or their company got acquired. That group ended up being the most useful.</p>
+              <p>Before jumping to solutions, I needed to understand what was actually driving rep preference — not just the story we were already telling ourselves.</p>
+              <p>I interviewed owners, office managers, and production managers, and ran a broader survey across 70 users. I worked closely with Customer Success and Support to see where orders were actually breaking. One group I went after deliberately: companies that had recently lost a trusted rep — either because the rep left or their supplier got acquired. That group gave the clearest signal because the before/after contrast was immediate and sharp.</p>
 
               <h3 class="cs-subheading">Who I talked to.</h3>
 
               <div class="cs-interview-grid">
                 <div class="cs-interview-card">
                   <strong>Suncraft — Garrett</strong>
-                  <p>Had relied on a rep who basically functioned as a human AI — give him minimal info and he'd auto-select compatible materials, catch substitutions, flag issues before they shipped. When that rep's company got acquired, that expertise just vanished. Garrett was now getting delivery errors every other order.</p>
+                  <p>Garrett had a rep who basically functioned like a human AI. He could send vague info and the rep would figure out compatible materials, catch substitutions, and flag problems before anything shipped. When that rep's company got acquired, the expertise vanished overnight. Garrett started seeing delivery errors on every other order.</p>
                 </div>
                 <div class="cs-interview-card">
                   <strong>Triarch — CEO</strong>
-                  <p>Pushed back on material orders as the right place for AI — felt estimate time was where it would be more valuable. Worth noting though: this customer was in the 27% who convert estimates to material orders. He already had upstream validation. His experience wasn't representative of most users.</p>
+                  <p>He pushed back on the whole premise — in his view, estimate time was where AI assistance would actually pay off, not material ordering. Worth noting: he was already in the 27% who convert estimates into material orders, so he had upstream validation built in. Useful perspective, but not representative of most users.</p>
                 </div>
                 <div class="cs-interview-card">
                   <strong>Slog Group — Juan</strong>
-                  <p>Flagged catalog accuracy as a major pain point. Also surfaced taxes on material orders as a high-urgency gap affecting their QuickBooks integration — that one came up a few times and wasn't on our radar going in.</p>
+                  <p>Juan was direct about catalog accuracy being a major pain point. He also surfaced taxes on material orders as an urgent issue affecting their QuickBooks integration. That tax theme came up more than once and wasn't on our radar early.</p>
                 </div>
                 <div class="cs-interview-card">
                   <strong>Legacy Roofing — Monty</strong>
-                  <p>Was using an external spreadsheet for calculations, didn't know JobNimbus had that built in. Had also set up a parallel text thread with his supplier as a backup — a workaround that pointed at something deeper than a feature gap.</p>
+                  <p>Monty was doing order calculations in an external spreadsheet and had no idea JobNimbus already had that capability. He also kept a separate text thread with his supplier as a backup — a workaround that pointed to a deeper trust gap, not just a missing feature.</p>
                 </div>
               </div>
 
-              <h3 class="cs-subheading">What the data told us.</h3>
-              <p>The survey's top ask was straightforward: guarantee the supplier actually receives the order. Rep preference was about negotiation, flexibility, and relationship — not mistake prevention, which was what we'd assumed.</p>
-              <p>But the interviews added texture. When a trusted rep disappears, the expertise gap is real and immediate. And for the 73% of users building orders from scratch without an estimate, there's no safety net at all — no upstream validation, nothing catching errors before submission.</p>
+              <h3 class="cs-subheading">What the data said.</h3>
+              <p>The survey's top question was basic: make sure the supplier actually receives the order. The rep preference was mostly about negotiation, relationships, and flexibility — not mistake prevention, which had been our assumption.</p>
+              <p>Interviews added the nuance surveys can't. When a trusted rep leaves, the expertise gap is real and shows up fast. And for the 73% building orders from scratch, there's basically no safety net — no estimate conversion, nothing catching errors before submission.</p>
 
               <blockquote class="cs-pullquote">
                 <p>"Previously relied on a knowledgeable supplier rep as a 'human AI' — rep would auto-select compatible materials from basic info. QXO lacks this expertise level."</p>
@@ -172,55 +172,60 @@
             <div class="cs-section reveal" id="first-idea">
               <div class="cs-divider"></div>
               <h2>The First Idea.</h2>
-              <p>Before research wrapped, the team had started exploring a direction: what if ordering through JobNimbus felt like texting your supplier rep? An AI chatbot embedded in the material order form, guiding users through it conversationally.</p>
-              <p>It was a genuinely compelling idea. We built and tested a prototype.</p>
+              <p>Before research fully wrapped, we started exploring a concept: what if placing an order in JobNimbus felt like texting your rep? We prototyped an AI chatbot embedded in the material order form, walking users through it conversationally.</p>
+              <p>It was genuinely interesting. We built it and put it in front of customers.</p>
 
               <div class="cs-callout cs-callout--miss">
                 <span class="cs-callout-label">What we heard</span>
-                <p>Customers could see it helping someone brand new to ordering. For their actual day-to-day users — the experienced ones — it would go untouched. They wanted to move fast, not be guided through something they already knew how to do.</p>
+                <p>They told us it might help someone brand new. But for day-to-day work, the experienced users said they'd skip right past it. They weren't looking for a guide — they were trying to move fast through something they already knew cold.</p>
               </div>
 
-              <p>We missed. But the way customers told us that was just as useful as the miss itself — they didn't just say no. They told us what they actually wanted instead.</p>
+              <p>That was a miss. But the feedback was exactly what you want: not polite rejection, but specific direction. People didn't just say no, they told us what they actually wanted instead.</p>
             </div>
 
             <div class="cs-section reveal" id="pivot">
               <div class="cs-divider"></div>
               <h2>The Pivot.</h2>
-              <p>The same themes kept coming up across interviews. Customers wanted AI in material ordering — just not like that. Not something that replaced the process or walked them through it. Something that ran quietly in the background and caught problems before they became someone else's problem.</p>
-              <p>Catch the compatibility issue. Flag the missing item. Surface the wrong quantity. The specific things a good rep would have caught.</p>
-              <p>The 73/27 split made the direction clear. Most users are building orders from scratch with nothing checking their work. That's who we were designing for.</p>
+              <p>Across interviews, the same theme kept surfacing. Users did want AI in material ordering — just not as a replacement for the workflow or a step-by-step companion. They wanted something quiet that catches problems before those problems become expensive.</p>
+              <p>Catch a compatibility issue. Flag a missing item. Call out the wrong quantity. Basically, what a good rep does — without slowing anyone down.</p>
+              <p>The 73/27 split made the audience obvious. Most users are building from scratch with no validation at all. That's who this needed to work for.</p>
             </div>
 
             <div class="cs-section reveal" id="design">
               <div class="cs-divider"></div>
               <h2>The Design.</h2>
-              <p>The central challenge was restraint.</p>
-              <p>Experienced users move fast. Any AI that interrupted their flow, added latency, or got between them and the submit button would get ignored — or worked around. The design had to earn its place by staying out of the way until it was actually needed.</p>
-              <p>The result: a single Smart Check button in the Material Order header that does nothing until the user triggers it. When they do, it reviews the full order and surfaces results in a slide-out panel, organized by severity. The user stays in control throughout.</p>
+              <p>The core challenge wasn't how smart we could make it — it was restraint.</p>
+              <p>Experienced users move fast. If AI interrupts them, introduces a delay, or wedges itself between them and the submit button, they'll route around it. So the design needed to stay out of the way until the user chose to invoke it — and then be immediately useful.</p>
+              <p>We landed on a single Smart Check button in the Material Order header. It doesn't do anything until the user triggers it. When they do, it reviews the order and surfaces results in a slide-out panel, grouped by severity. The user stays in control the whole time.</p>
 
               <h3 class="cs-subheading">What it reviews.</h3>
 
               <div class="cs-severity-grid">
                 <div class="cs-severity-card cs-severity-card--error">
-                  <strong>Errors — Critical</strong>
+                  <strong>Errors — critical</strong>
                   <ul>
-                    <li>SKU not found, product unavailable at branch, catalog match failure</li>
+                    <li>SKU not found</li>
+                    <li>Product unavailable at selected branch</li>
+                    <li>Catalog match failure</li>
                   </ul>
                 </div>
                 <div class="cs-severity-card cs-severity-card--warning">
-                  <strong>Warnings — Worth Reviewing</strong>
+                  <strong>Warnings — worth reviewing</strong>
                   <ul>
-                    <li>Missing starter strip, missing underlayment, missing ridge cap or drip edge, potentially incompatible combinations</li>
+                    <li>Missing starter strip</li>
+                    <li>Missing underlayment</li>
+                    <li>Missing ridge cap or drip edge</li>
+                    <li>Potentially incompatible combinations</li>
                   </ul>
                 </div>
               </div>
 
-              <p>Every flagged item has a direct action: Find Replacement, Add Item, Remove Item, or Ignore. Batch actions let users apply or dismiss everything at once. The bar for acting on a suggestion should be lower than scrolling past it.</p>
-              <p>There's also a separate Clean Up button for zero-quantity items and disconnected products. Keeping those distinct was intentional — Clean Up is maintenance. Smart Check is judgment. They should feel like different things.</p>
+              <p>Every flagged item has an action attached: Find Replacement, Add Item, Remove Item, or Ignore. Batch actions let users apply or dismiss everything at once. The idea was simple: acting on a suggestion should be easier than scrolling past it.</p>
+              <p>We also added a separate Clean Up button for zero-quantity items and disconnected products. That separation was intentional — Clean Up is housekeeping, Smart Check is judgment. They shouldn't feel like the same thing.</p>
 
               <h3 class="cs-subheading">How I prototyped and tested it.</h3>
-              <p>I built Smart Check as a navigable prototype on the internal Forge server — fully interactive, hosted, shareable asynchronously. Dropping a URL in Slack and getting real feedback within a few hours cut out a lot of scheduled walkthrough time that would have slowed us down.</p>
-              <p>The engineering team also ran a live POC wired to a real AI backend for testing with actual customer logos. That mattered — genuine AI responses gave us honest signal on accuracy and trust in a way a static prototype couldn't have. You can fake a lot of things in a prototype. You can't fake whether the AI actually catches the right errors.</p>
+              <p>I built Smart Check as a navigable prototype on our internal Forge server — fully interactive, hosted, easy to share async. Dropping a link in Slack and getting feedback within a few hours cut out a lot of scheduled walkthroughs that would have slowed us down.</p>
+              <p>Engineering also ran a live POC connected to a real AI backend so we could test with actual customer logos. That mattered. Real model output gave us an honest read on accuracy and trust in a way static prototypes can't. You can fake interaction patterns. You can't fake whether the AI catches the right mistakes.</p>
 
               <a href="https://jnux-forge.pages.dev/prototypes/amy/ai-smart-check/create-material-order" target="_blank" rel="noopener" class="cs-proto-link">View prototype →</a>
             </div>
@@ -234,35 +239,35 @@
                     <strong>Non-blocking</strong>
                     <span>users can submit with warnings unresolved</span>
                   </div>
-                  <p>Smart Check needs to prove its accuracy before it earns any enforcement authority. Starting as a suggestion lets it build trust before asking for more.</p>
+                  <p>Smart Check has to earn trust through accuracy before it gets any authority. Starting as guidance gives it room to build credibility before enforcement becomes an option.</p>
                 </div>
                 <div class="cs-decision">
                   <div class="cs-decision-header">
                     <strong>On-demand only</strong>
                     <span>button-triggered, never automatic</span>
                   </div>
-                  <p>Auto-running on every save would interrupt experienced users who already know what they're doing. They decide when the review happens.</p>
+                  <p>Running checks on every save would interrupt experienced users who already know what they're doing. They decide when the review happens.</p>
                 </div>
                 <div class="cs-decision">
                   <div class="cs-decision-header">
                     <strong>Severity levels</strong>
-                    <span>errors vs. warnings</span>
+                    <span>errors vs. warnings, treated differently</span>
                   </div>
-                  <p>A missing SKU is a blocker. A missing drip edge is a heads-up. Treating them the same would train users to ignore everything. Separating them lets people triage.</p>
+                  <p>A missing SKU is a hard stop. A missing drip edge is a heads-up. Treating those the same trains people to ignore the whole panel.</p>
                 </div>
                 <div class="cs-decision">
                   <div class="cs-decision-header">
-                    <strong>Actionable, not just informational</strong>
-                    <span>every flag has a next step</span>
+                    <strong>Actionable, not informational</strong>
+                    <span>every flag comes with a next step</span>
                   </div>
-                  <p>A list of problems with no clear path to fixing them is just friction. Every item resolves without leaving the panel.</p>
+                  <p>A list of issues with no clear fix is just extra friction.</p>
                 </div>
                 <div class="cs-decision">
                   <div class="cs-decision-header">
                     <strong>Future enforcement layer</strong>
-                    <span>behind access profiles</span>
+                    <span>designed with access profiles from the start</span>
                   </div>
-                  <p>Once accuracy is proven, managers can require Smart Check for junior estimators while leaving experienced users alone. That use case — training new estimators — came up repeatedly in research and shaped the permission model from the start.</p>
+                  <p>Once accuracy is proven, managers can require Smart Check for junior estimators while leaving experienced users alone. That training angle came up repeatedly in research and shaped the permission model early.</p>
                 </div>
               </div>
             </div>
@@ -270,38 +275,38 @@
             <div class="cs-section reveal" id="roadmap">
               <div class="cs-divider"></div>
               <h2>Roadmap.</h2>
-              <p>Smart Check is shipping incrementally — each phase validating accuracy and adoption before the next layer is added.</p>
+              <p>Smart Check is shipping in phases, with each step focused on validating accuracy and real usage before adding capability.</p>
 
               <div class="cs-phase-list">
                 <div class="cs-phase cs-phase--complete">
-                  <span class="cs-phase-status">Complete</span>
-                  <strong>Phase 1 — POC &amp; Logo Testing</strong>
+                  <span class="cs-phase-status">✅ Complete</span>
+                  <strong>Phase 1 — POC &amp; logo testing</strong>
                   <p>Hosted proof-of-concept wired to a real AI backend, tested with live customer logos.</p>
                 </div>
                 <div class="cs-phase cs-phase--complete">
-                  <span class="cs-phase-status">Complete</span>
-                  <strong>Phase 2 — Agent Foundation</strong>
-                  <p>Core AI infrastructure: knowledge base, manufacturer specs, compatibility rules.</p>
+                  <span class="cs-phase-status">✅ Complete</span>
+                  <strong>Phase 2 — Agent foundation</strong>
+                  <p>Core AI infrastructure — knowledge base, manufacturer specs, compatibility rules.</p>
                 </div>
                 <div class="cs-phase cs-phase--active">
-                  <span class="cs-phase-status">In Progress</span>
-                  <strong>Phase 3 — Image to Material Order</strong>
-                  <p>Upload a photo of a paper order and auto-generate a material order. Meeting roofers where they actually work.</p>
+                  <span class="cs-phase-status">🔄 In Progress</span>
+                  <strong>Phase 3 — Image to material order</strong>
+                  <p>Upload a photo of a paper order and generate a material order automatically.</p>
                 </div>
                 <div class="cs-phase cs-phase--upcoming">
-                  <span class="cs-phase-status">Upcoming</span>
-                  <strong>Phase 4 — Full Smart Check Engine</strong>
-                  <p>Complete error and warning detection: SKU validation, compatibility checking, missing item identification.</p>
+                  <span class="cs-phase-status">⬜ Upcoming</span>
+                  <strong>Phase 4 — Full Smart Check engine</strong>
+                  <p>Complete error and warning detection — SKU validation, compatibility checking, missing item identification.</p>
                 </div>
                 <div class="cs-phase cs-phase--upcoming">
-                  <span class="cs-phase-status">Upcoming</span>
-                  <strong>Phase 5 — Suggested Products</strong>
-                  <p>Proactively surface the next logical product, moving Smart Check from reactive to anticipatory.</p>
+                  <span class="cs-phase-status">⬜ Upcoming</span>
+                  <strong>Phase 5 — Suggested products</strong>
+                  <p>Surface the next logical product, moving Smart Check from reactive to anticipatory.</p>
                 </div>
                 <div class="cs-phase cs-phase--planned">
-                  <span class="cs-phase-status">Planned</span>
-                  <strong>Phase 6–7 — AI Add-Ons &amp; Sales Workflow</strong>
-                  <p>Post-MVP expansion into the sales workflow and supplier-side intelligence.</p>
+                  <span class="cs-phase-status">⬜ Planned</span>
+                  <strong>Phases 6–7 — AI add-ons &amp; sales workflow</strong>
+                  <p>Post-MVP expansion into sales workflow and supplier-side intelligence.</p>
                 </div>
               </div>
             </div>
@@ -309,7 +314,7 @@
             <div class="cs-section reveal" id="metrics">
               <div class="cs-divider"></div>
               <h2>Success Metrics.</h2>
-              <p>Smart Check's first job isn't to be used by everyone — it's to be genuinely useful when it is used. Until the AI has proven itself, accuracy and action rate matter more than raw adoption.</p>
+              <p>The goal isn't universal adoption out of the gate — it's being genuinely useful when someone does run it. Until the AI proves itself, accuracy and action rate matter more than raw usage numbers.</p>
 
               <div class="cs-metrics-table-wrap">
                 <table class="cs-metrics-table">
@@ -355,9 +360,9 @@
               <div class="cs-divider"></div>
               <h2>Reflections.</h2>
 
-              <p>The chatbot prototype was a miss, but it was probably the most useful thing we made. When you test something that doesn't land and the feedback is specific — not just "this isn't for me" but "here's what I actually want" — that's a better outcome than testing something that gets polite approval and then never gets used. We found the right problem because we got the first one wrong in front of real customers.</p>
-              <p>The 73/27 split was the other turning point. That single data point changed who we were designing for. Without it, we'd have kept building for the minority of users who already had validation upstream — the ones who needed it least. Quant research gave us permission to make a sharp call that interviews alone couldn't have.</p>
-              <p>The thing I keep coming back to is the non-blocking decision. It probably looked like hedging from the outside — why build something you're not willing to enforce? But it was actually the only defensible product strategy. You can't ask users to trust an AI that hasn't proven itself yet. You have to let it be right enough times first. The enforcement layer is coming. It just needs to earn it.</p>
+              <p>The chatbot prototype didn't land, but it was probably the most valuable thing we built early. When you test something that fails, and people come back with "here's what I actually wanted," you move faster than you ever do from polite approval that never converts into real behavior.</p>
+              <p>The other turning point was that 73/27 split. One data point changed who we were designing for. Without it, we likely would have kept building for the minority who already had upstream validation — the people who needed the least help. Quant gave us the confidence to make a sharp call that interviews alone couldn't justify.</p>
+              <p>I keep coming back to the non-blocking decision. From the outside, it might look like hedging — building something we weren't willing to enforce. In practice, it was the only move that made sense. You can't demand trust in an AI system before it's earned it. Let it be right enough times first. Enforcement can come later.</p>
             </div>
 
           </article>

@@ -41,7 +41,7 @@ const PROJECTS = [
   {
     href: 'bulk-invoicing.html',
     image: 'p2',
-    imgSrc: 'assets/images/Filevine Bulk Invoicing - WORK CARD (Small).png',
+    imgSrc: 'assets/images/NEW Filevine Bulk invoicing - WORK CARD - small.png',
     imgAlt: 'Bulk Invoicing',
     tags: ['Product Design', 'LegalTech'],
     company: 'Filevine',
