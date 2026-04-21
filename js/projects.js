@@ -26,7 +26,8 @@ const PROJECTS = [
     tags: ['Product Design', 'AI'],
     company: 'JobNimbus',
     title: 'AI Smart Check',
-    desc: 'AI-powered validation on material orders — reducing errors and streamlining the ordering workflow for home services contractors.'
+    desc: 'AI-powered validation on material orders — reducing errors and streamlining the ordering workflow for home services contractors.',
+    protected: true
   },
   {
     href: 'mycase-smart-spend.html',
@@ -85,6 +86,7 @@ function buildCard(project, index, featured = false) {
     : '';
 
   const badge = project.comingSoon ? `<span class="project-coming-soon-badge">Coming Soon</span>` : '';
+  const lockBadge = project.protected ? `<span class="project-lock-badge"><svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="5.5" width="9" height="7" rx="1.5" stroke="currentColor" stroke-width="1.25"/><path d="M3.5 5.5V3.5a2 2 0 0 1 4 0v2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round"/></svg> Password protected</span>` : '';
 
   const inner = `
         <div class="project-image ${project.image}">${imageContent}</div>
@@ -94,6 +96,7 @@ function buildCard(project, index, featured = false) {
             <span class="project-company">${project.company}</span>
           </div>
           <h3 class="project-title">${project.title} ${badge}</h3>
+            ${lockBadge}
           <p class="project-desc">${project.desc}</p>
         </div>`;
 
