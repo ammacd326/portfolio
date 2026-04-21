@@ -476,15 +476,10 @@ h2, h3, h4 {
 .project-card--coming-soon > div {
   display: contents;
 }
-.project-lock-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  font-weight: 500;
+.project-lock-icon {
+  display: block;
   color: var(--muted);
-  margin-top: 0.4rem;
+  flex-shrink: 0;
 }
 
 .project-coming-soon-badge {
