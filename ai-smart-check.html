@@ -175,6 +175,11 @@
               <p>Before research fully wrapped, we started exploring a concept: what if placing an order in JobNimbus felt like texting your rep? We prototyped an AI chatbot embedded in the material order form, walking users through it conversationally.</p>
               <p>It was genuinely interesting. We built it and put it in front of customers.</p>
 
+              <figure class="cs-image-block">
+                <img src="assets/images/JN Smart check - Early iteration.png" alt="Smart Check early chatbot concept">
+                <figcaption>The first concept — an AI chatbot embedded in the material order form, walking users through it conversationally.</figcaption>
+              </figure>
+
               <div class="cs-callout cs-callout--miss">
                 <span class="cs-callout-label">What we heard</span>
                 <p>They told us it might help someone brand new. But for day-to-day work, the experienced users said they'd skip right past it. They weren't looking for a guide — they were trying to move fast through something they already knew cold.</p>
@@ -204,21 +209,21 @@
                 <div class="cs-severity-card cs-severity-card--error">
                   <strong>Errors — critical</strong>
                   <ul>
-                    <li>SKU not found</li>
-                    <li>Product unavailable at selected branch</li>
-                    <li>Catalog match failure</li>
+                    <li>Line items the supplier can't fulfill (out of stock)</li>
+                    <li>Items not linked to the supplier's catalog</li>
+                    <li>Items with no SKU at the selected supplier</li>
                   </ul>
                 </div>
                 <div class="cs-severity-card cs-severity-card--warning">
                   <strong>Warnings — worth reviewing</strong>
                   <ul>
-                    <li>Missing starter strip</li>
-                    <li>Missing underlayment</li>
-                    <li>Missing ridge cap or drip edge</li>
-                    <li>Potentially incompatible combinations</li>
+                    <li>Incomplete selections (options not yet picked)</li>
+                    <li>Missing companion items (starter strip, underlayment, drip edge, compatible ridge vent)</li>
+                    <li>Quantity mismatches (too few nails, or line quantities that don't match roof measurements)</li>
                   </ul>
                 </div>
               </div>
+              <p>In short: errors = supplier won't accept it; warnings = the order will go through, but it probably shouldn't as-is.</p>
 
               <p>Every flagged item has an action attached: Find Replacement, Add Item, Remove Item, or Ignore. Batch actions let users apply or dismiss everything at once. The idea was simple: acting on a suggestion should be easier than scrolling past it.</p>
               <p>We also added a separate Clean Up button for zero-quantity items and disconnected products. That separation was intentional — Clean Up is housekeeping, Smart Check is judgment. They shouldn't feel like the same thing.</p>
@@ -227,7 +232,28 @@
               <p>I built Smart Check as a navigable prototype on our internal Forge server — fully interactive, hosted, easy to share async. Dropping a link in Slack and getting feedback within a few hours cut out a lot of scheduled walkthroughs that would have slowed us down.</p>
               <p>Engineering also ran a live POC connected to a real AI backend so we could test with actual customer logos. That mattered. Real model output gave us an honest read on accuracy and trust in a way static prototypes can't. You can fake interaction patterns. You can't fake whether the AI catches the right mistakes.</p>
 
-              <a href="https://jnux-forge.pages.dev/prototypes/amy/ai-smart-check/create-material-order" target="_blank" rel="noopener" class="cs-proto-link">View prototype →</a>
+              <figure class="cs-image-block">
+                <div class="forge-proto-wrapper" style="position:relative; width:100%; overflow:hidden;">
+                  <iframe class="forge-proto-iframe" style="border:none; position:absolute; top:0; left:0; width:1440px; height:900px; transform-origin:top left;" src="https://jnux-forge.pages.dev/prototypes/amy/material-orders-ai-features/create-material-order" allowfullscreen></iframe>
+                </div>
+                <figcaption>Interactive prototype — Smart Check in the material order flow as well as create from upload.</figcaption>
+              </figure>
+              <a href="https://jnux-forge.pages.dev/prototypes/amy/material-orders-ai-features/create-material-order" target="_blank" rel="noopener" class="btn btn-outline" style="display: inline-flex; margin-bottom: var(--space-xl);">Open in full screen →</a>
+              <script>
+                (function() {
+                  function scaleForge() {
+                    var wrappers = document.querySelectorAll('.forge-proto-wrapper');
+                    wrappers.forEach(function(wrapper) {
+                      var iframe = wrapper.querySelector('.forge-proto-iframe');
+                      var scale = wrapper.offsetWidth / 1440;
+                      iframe.style.transform = 'scale(' + scale + ')';
+                      wrapper.style.height = (900 * scale) + 'px';
+                    });
+                  }
+                  scaleForge();
+                  window.addEventListener('resize', scaleForge);
+                })();
+              </script>
             </div>
 
             <div class="cs-section reveal" id="decisions">
@@ -277,36 +303,96 @@
               <h2>Roadmap.</h2>
               <p>Smart Check is shipping in phases, with each step focused on validating accuracy and real usage before adding capability.</p>
 
-              <div class="cs-phase-list">
-                <div class="cs-phase cs-phase--complete">
-                  <span class="cs-phase-status">✅ Complete</span>
-                  <strong>Phase 1 — POC &amp; logo testing</strong>
-                  <p>Hosted proof-of-concept wired to a real AI backend, tested with live customer logos.</p>
+              <style>
+                .smartcheck-roadmap .phase { display: flex; gap: 16px; align-items: flex-start; padding: 16px 0; border-bottom: 0.5px solid var(--border); }
+                .smartcheck-roadmap .phase:last-child { border-bottom: none; }
+                .smartcheck-roadmap .phase-left { display: flex; align-items: center; justify-content: center; width: 40px; flex-shrink: 0; padding-top: 2px; }
+                .smartcheck-roadmap .phase-dot { width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+                .smartcheck-roadmap .dot-complete { background: var(--accent); }
+                .smartcheck-roadmap .dot-complete::after { content: '✓'; color: #fff; font-size: 13px; font-weight: 700; line-height: 1; }
+                .smartcheck-roadmap .dot-progress { background: #E8A020; animation: pulse-progress 1.5s ease-in-out infinite; }
+                @keyframes pulse-progress {
+                  0%, 100% { box-shadow: 0 0 0 0 rgba(232, 160, 32, 0.6); }
+                  50% { box-shadow: 0 0 0 10px rgba(232, 160, 32, 0); }
+                }
+                .smartcheck-roadmap .dot-upcoming { background: var(--border); }
+                .smartcheck-roadmap .dot-planned { background: var(--border); opacity: 0.5; }
+                .smartcheck-roadmap .phase-number { font-size: 11px; color: var(--muted); font-weight: 500; margin-bottom: 2px; }
+                .smartcheck-roadmap .phase-title { font-size: 14px; font-weight: 500; color: var(--text); margin: 0 0 4px; }
+                .smartcheck-roadmap .phase-desc { font-size: 13px; color: var(--muted); margin: 0 0 6px; line-height: 1.5; }
+                .smartcheck-roadmap .badge { display: inline-block; font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 10px; }
+                .smartcheck-roadmap .badge-complete { background: var(--accent-muted); color: var(--accent); }
+                .smartcheck-roadmap .badge-progress { background: rgba(232, 160, 32, 0.1); color: #E8A020; }
+                .smartcheck-roadmap .badge-upcoming { background: var(--border); color: var(--muted); }
+                .smartcheck-roadmap .badge-planned { background: var(--border); color: var(--muted); opacity: 0.7; }
+              </style>
+
+              <div class="smartcheck-roadmap" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 0.5rem 1.5rem 1rem;">
+                <div class="phase">
+                  <div class="phase-left">
+                    <div class="phase-dot dot-complete"></div>
+                  </div>
+                  <div>
+                    <div class="phase-number">Phase 1</div>
+                    <p class="phase-title">POC &amp; logo testing</p>
+                    <p class="phase-desc">Hosted proof-of-concept wired to a real AI backend, tested with live customer logos.</p>
+                    <span class="badge badge-complete">Complete</span>
+                  </div>
                 </div>
-                <div class="cs-phase cs-phase--complete">
-                  <span class="cs-phase-status">✅ Complete</span>
-                  <strong>Phase 2 — Agent foundation</strong>
-                  <p>Core AI infrastructure — knowledge base, manufacturer specs, compatibility rules.</p>
+                <div class="phase">
+                  <div class="phase-left">
+                    <div class="phase-dot dot-complete"></div>
+                  </div>
+                  <div>
+                    <div class="phase-number">Phase 2</div>
+                    <p class="phase-title">Agent foundation</p>
+                    <p class="phase-desc">Core AI infrastructure — knowledge base, manufacturer specs, compatibility rules.</p>
+                    <span class="badge badge-complete">Complete</span>
+                  </div>
                 </div>
-                <div class="cs-phase cs-phase--active">
-                  <span class="cs-phase-status">🔄 In Progress</span>
-                  <strong>Phase 3 — Image to material order</strong>
-                  <p>Upload a photo of a paper order and generate a material order automatically.</p>
+                <div class="phase">
+                  <div class="phase-left">
+                    <div class="phase-dot dot-progress"></div>
+                  </div>
+                  <div>
+                    <div class="phase-number">Phase 3</div>
+                    <p class="phase-title">Image to material order</p>
+                    <p class="phase-desc">Upload a photo of a paper order and generate a material order automatically — meeting roofers where they work.</p>
+                    <span class="badge badge-progress">In progress</span>
+                  </div>
                 </div>
-                <div class="cs-phase cs-phase--upcoming">
-                  <span class="cs-phase-status">⬜ Upcoming</span>
-                  <strong>Phase 4 — Full Smart Check engine</strong>
-                  <p>Complete error and warning detection — SKU validation, compatibility checking, missing item identification.</p>
+                <div class="phase">
+                  <div class="phase-left">
+                    <div class="phase-dot dot-upcoming"></div>
+                  </div>
+                  <div>
+                    <div class="phase-number">Phase 4</div>
+                    <p class="phase-title">Full Smart Check engine</p>
+                    <p class="phase-desc">Complete error and warning detection — SKU validation, compatibility checking, missing item identification.</p>
+                    <span class="badge badge-upcoming">Upcoming</span>
+                  </div>
                 </div>
-                <div class="cs-phase cs-phase--upcoming">
-                  <span class="cs-phase-status">⬜ Upcoming</span>
-                  <strong>Phase 5 — Suggested products</strong>
-                  <p>Surface the next logical product, moving Smart Check from reactive to anticipatory.</p>
+                <div class="phase">
+                  <div class="phase-left">
+                    <div class="phase-dot dot-upcoming"></div>
+                  </div>
+                  <div>
+                    <div class="phase-number">Phase 5</div>
+                    <p class="phase-title">Suggested products</p>
+                    <p class="phase-desc">Surface the next logical product — moving Smart Check from reactive to anticipatory.</p>
+                    <span class="badge badge-upcoming">Upcoming</span>
+                  </div>
                 </div>
-                <div class="cs-phase cs-phase--planned">
-                  <span class="cs-phase-status">⬜ Planned</span>
-                  <strong>Phases 6–7 — AI add-ons &amp; sales workflow</strong>
-                  <p>Post-MVP expansion into sales workflow and supplier-side intelligence.</p>
+                <div class="phase">
+                  <div class="phase-left">
+                    <div class="phase-dot dot-planned"></div>
+                  </div>
+                  <div>
+                    <div class="phase-number">Phases 6–7</div>
+                    <p class="phase-title">AI add-ons &amp; sales workflow</p>
+                    <p class="phase-desc">Post-MVP expansion into the sales workflow and supplier-side intelligence.</p>
+                    <span class="badge badge-planned">Planned</span>
+                  </div>
                 </div>
               </div>
             </div>
