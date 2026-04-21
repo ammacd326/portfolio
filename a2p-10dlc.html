@@ -76,10 +76,7 @@
         </div>
 
         <div class="cs-hero-image">
-          <!-- Replace with: <img src="assets/images/a2p-cover.png" alt="A2P 10DLC Registration"> -->
-          <div class="cs-image-placeholder" style="aspect-ratio:16/7;">
-            Add header image — assets/images/a2p-cover.png
-          </div>
+          <img src="assets/images/Filevine A2P 10DLC - HERO.png" alt="A2P 10DLC Registration">
         </div>
       </div>
     </section>
@@ -119,24 +116,40 @@
               <div class="cs-divider"></div>
               <h2>How I approached it.</h2>
               <p>There was no existing pattern to work from, so I mapped the full user flow from scratch. The goal for the primary path — Tier 1, the free option — was to keep it clean enough that most users never had to think about the paid tier at all.</p>
-              <p>The existing number management area combined text and fax in one place, which wasn't going to work here. I split them into separate sections and added a dedicated registration area. A small structural shift, but it let us surface status clearly without disrupting anything else in the app.</p>
-              <p>The timeline forced a communication cadence I don't usually run — direct check-ins with the CEO and technical director from early on. Not standard for our team. But it helped. Decisions that might normally take weeks got made in days. Alignment happened faster because the right people were in the loop from the start.</p>
-              <p>Most of those five weeks went into detailed mocks, testing, and writing the copy for the experience. The copy mattered as much as anything else. Registration flows live or die on whether people understand each prompt. Get that wrong and the whole thing falls apart.</p>
 
               <figure class="cs-image-block">
-                <!-- Replace with: <img src="assets/images/a2p-designs.png" alt="A2P Registration Flow"> -->
-                <div class="cs-image-placeholder">
-                  Add registration flow designs — assets/images/a2p-designs.png
-                </div>
-                <figcaption>High-fidelity registration flow — org and phone number registration</figcaption>
+                <img src="assets/images/User Flow.avif" alt="A2P 10DLC user flow">
+                <figcaption>Full user flow mapped from scratch before any UI work began.</figcaption>
               </figure>
+
+              <p>The existing number management area combined text and fax in one place, which wasn't going to work here. I split them into separate sections and added a dedicated registration area. A small structural shift, but it let us surface status clearly without disrupting anything else in the app.</p>
+
+              <figure class="cs-image-block">
+                <img src="assets/images/A2P 10DLC Wireframes.avif" alt="A2P 10DLC wireframes">
+                <figcaption>Early wireframes showing the split between Text, Fax, and Registration tabs.</figcaption>
+              </figure>
+
+              <p>The timeline forced a communication cadence I don't usually run — direct check-ins with the CEO and technical director from early on. Not standard for our team. But it helped. Decisions that might normally take weeks got made in days. Alignment happened faster because the right people were in the loop from the start.</p>
+              <p>Most of those five weeks went into detailed mocks, testing, and writing the copy for the experience. The copy mattered as much as anything else. Registration flows live or die on whether people understand each prompt. Get that wrong and the whole thing falls apart.</p>
             </div>
 
             <div class="cs-section reveal" id="design-system">
               <div class="cs-divider"></div>
               <h2>A component I didn't see coming.</h2>
               <p>The registration flow itself wasn't the hardest design problem. The harder part was showing status across four states — complete, pending, failed, and none — in a way that was clear, consistent, and felt like it belonged in the app rather than bolted on.</p>
+
+              <figure class="cs-image-block">
+                <img src="assets/images/Status Bar Documentation.png" alt="Status bar documentation">
+                <figcaption>Nine distinct status scenarios, each requiring a different visual treatment and interaction behavior.</figcaption>
+              </figure>
+
               <p>Our design system didn't have a status banner that could handle that range. I went through more iterations on that one component than anything else in the project. Eventually, with input from a senior designer, we landed on something solid.</p>
+
+              <figure class="cs-image-block">
+                <img src="assets/images/Screen Shots.png" alt="Final UI screens">
+                <figcaption>Final UI showing the error state, registered state, and text tab with unregistered number chips.</figcaption>
+              </figure>
+
               <p>What happened next was unexpected: other teams picked it up and it got pulled into the broader design system. Something that started as a fix for one compliance flow became a pattern the whole app now uses.</p>
             </div>
 
@@ -163,6 +176,13 @@
                   <span class="cs-metric-label">new design component, now used across the full product</span>
                 </div>
               </div>
+            </div>
+
+            <div class="cs-section reveal" id="prototype">
+              <figure class="cs-image-block">
+                <iframe style="border: none; display: block;" width="100%" height="600" src="https://embed.figma.com/proto/VoCPg3xWQFIw0DdfTYq9Vl/Amy-MacDonald---A2P?node-id=448-15273&p=f&viewport=703%2C487%2C0.07&scaling=scale-down&content-scaling=fixed&starting-point-node-id=448%3A15273&show-proto-sidebar=1&page-id=35%3A523&embed-host=share" allowfullscreen></iframe>
+                <figcaption>Full interactive prototype — A2P 10DLC registration flow</figcaption>
+              </figure>
             </div>
 
             <div class="cs-section reveal" id="reflection">

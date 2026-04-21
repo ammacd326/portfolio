@@ -118,6 +118,12 @@
                 <p>"I live in abject terror of you forgetting to put this in the database, because if you do, I will not get paid back. And if I gave away $700 to make $550, we're all going to be unemployed."</p>
                 <cite>— Firm Owner, Real Estate Law</cite>
               </blockquote>
+
+              <figure class="cs-image-block">
+                <img src="assets/images/Smart Spend research stats.png" alt="Smart Spend research stats">
+                <figcaption>Research synthesis showing the emotional and time cost of expense management across firm roles.</figcaption>
+              </figure>
+
               <p>That emotional weight changed how we framed the MVP. We weren't just trying to speed things up — we were trying to give people a sense that they had a grip on their firm's money. That difference kept showing up in later design decisions.</p>
               <p>In parallel, I did a competitive review of spend tools outside of legal — Ramp, Divvy, Stripe, Float. I looked closely at onboarding, card management, real-time alerts, receipt capture, and categorization. The goal wasn't to copy patterns. It was to understand what modern financial tooling feels like, then figure out where legal needed something different.</p>
             </div>
@@ -127,6 +133,13 @@
               <h2>Designing for multiple roles, on multiple platforms.</h2>
               <p>Smart Spend was never a single-user product. A paralegal grabbing a receipt on their phone doesn't behave like an office manager running firm-wide spend on a desktop dashboard. An accountant reconciling at month-end is a third world entirely.</p>
               <p>Early on I mapped separate journeys for each role — cardholder mobile flows, admin desktop management, expense-to-matter linking, reporting, accounting sync. Each path needed to work on its own, and the whole thing still had to feel like one product. That tension was constant.</p>
+
+              <figure class="cs-image-block">
+                <img src="assets/images/Smart Spend User Journey.png" alt="Smart Spend user journey map">
+                <figcaption>Journey map covering all three roles — cardholder mobile, admin desktop, and accountant reconciliation flows.</figcaption>
+              </figure>
+              <a href="assets/images/Smart Spend User Journey.png" target="_blank" rel="noopener" class="btn btn-outline" style="display: inline-flex; margin-bottom: var(--space-xl);">View full size →</a>
+
               <p>The simplest insight ended up driving the mobile experience: if capture doesn't happen in the moment, it often doesn't happen at all. Attorneys aren't going to reconstruct a week of purchases on a Friday afternoon.</p>
               <p>So we built an SMS-triggered notification that prompts a cardholder to link a transaction right after the charge clears — while the context is still fresh. That flow became one of the defining behaviors of the product.</p>
               <blockquote class="cs-pullquote">
@@ -140,7 +153,18 @@
               <h2>Testing and iterating, with real pressure.</h2>
               <p>I owned usability testing end to end — study planning, recruiting, moderated sessions, synthesis, and translating findings into design changes. We ran two formal rounds, then kept learning through alpha and beta.</p>
               <p>Round one was admin-focused: 23 sessions on the desktop dashboard, transaction management, card issuance, and permissions.</p>
+
+              <figure class="cs-image-block">
+                <iframe style="border: none; display: block;" width="100%" height="600" src="https://embed.figma.com/proto/JGJ4TZ93VA98qyX8yWJuN5/Smart-Spend-Case-Study?node-id=31-46045&viewport=125%2C-1170%2C0.6&scaling=scale-down&content-scaling=fixed&starting-point-node-id=31%3A46045&page-id=18%3A13537&embed-host=share" allowfullscreen></iframe>
+                <figcaption>V1 prototype used in round one usability testing — admin desktop focus.</figcaption>
+              </figure>
+
               <p>Round two shifted to the cardholder experience on mobile: 11 sessions on the core transaction flow.</p>
+
+              <figure class="cs-image-block">
+                <iframe style="border: none; display: block;" width="100%" height="600" src="https://embed.figma.com/proto/JGJ4TZ93VA98qyX8yWJuN5/Smart-Spend-Case-Study?node-id=46-76405&viewport=119%2C-469%2C0.77&scaling=scale-down&content-scaling=fixed&starting-point-node-id=46%3A76405&page-id=18%3A13538&embed-host=share" allowfullscreen></iframe>
+                <figcaption>V2 mobile prototype used in round two — focused on the core transaction linking flow.</figcaption>
+              </figure>
               <p>What made it higher stakes than usual was who was testing. Our CEO and CFO were part of alpha. Decisions had to be defensible with evidence, not just taste.</p>
               <p>Feedback was positive but specific. People wanted more context on the expense-linking screen, more detail in transaction tables, and a clearer distinction between raw bank data and the fields they were adding themselves. Small adjustments on paper — but they changed confidence levels immediately.</p>
               <div class="cs-metrics">
@@ -187,7 +211,12 @@
               <div class="cs-divider"></div>
               <h2>Where it landed.</h2>
               <p>By the time I transitioned off, Smart Spend had cleared alpha and beta with strong engagement, a 200+ firm waitlist, and a 72 SUS score that backed up what we were hearing in interviews — it wasn't just functional, people could use it without friction.</p>
-              <p>Press coverage:</p>
+
+              <figure class="cs-image-block">
+                <iframe style="border: none; display: block;" width="100%" height="600" src="https://embed.figma.com/proto/JGJ4TZ93VA98qyX8yWJuN5/Smart-Spend-Case-Study?node-id=46-93497&p=f&viewport=223%2C390%2C0.07&scaling=scale-down&content-scaling=fixed&starting-point-node-id=46%3A87181&page-id=18%3A13539&embed-host=share" allowfullscreen></iframe>
+                <figcaption>Final designs — view the full prototype.</figcaption>
+              </figure>
+              <h3 class="cs-subheading">Press coverage.</h3>
               <div class="cs-press">
                 <div class="cs-press-item">
                   <strong>Law Next</strong>
